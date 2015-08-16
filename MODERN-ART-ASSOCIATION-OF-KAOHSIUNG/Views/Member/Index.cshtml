@@ -1,0 +1,104 @@
+﻿<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/Member.js"></script>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*<table class="table">
+    <tr>
+        <th>
+            Member_ID
+        </th>
+        <th>
+            Member_Name
+        </th>
+        <th>
+            Member_Mobile
+        </th>
+        <th>
+            Member_Addresszip
+        </th>
+        <th>
+            Member_Address
+        </th>
+        <th>
+            Member_Picture
+        </th>
+        <th>
+            Member_Email
+        </th>
+        <th>
+            Member_Nowposition
+        </th>
+        <th>
+            Member_Account
+        </th>
+        <th>
+            Member_Password
+        </th>
+        <th>
+            Member_Education
+        </th>
+        <th>
+            Member_Experience
+        </th>
+        <th>
+            Member_Adminname
+        </th>
+        <th>
+            Member_Adminpasswd
+        </th>
+    </tr>
+    @{
+        var objMember = (IEnumerable<System.Data.DataRow>)ViewBag.table;
+        foreach (System.Data.DataRow row in objMember)
+        {
+            <tr>
+                <td>
+                    @row["Member_ID"]
+                </td>
+                <td>
+                    @row["Member_Name"]
+                </td>
+                <td>
+                    @row["Member_Mobile"]
+                </td>
+                <td>
+                    @row["Member_Addresszip"]
+                </td>
+                <td>
+                    @row["Member_Address"]
+                </td>
+                <td>
+                    @row["Member_Picture"]
+                </td>
+                <td>
+                    @row["Member_Email"]
+                </td>
+                <td>
+                    @row["Member_Nowposition"]
+                </td>
+                <td>
+                    @row["Member_Account"]
+                </td>
+                <td>
+                    @row["Member_Password"]
+                </td>
+                <td>
+                    @row["Member_Education"]
+                </td>
+                <td>
+                    @row["Member_Experience"]
+                </td>
+                <td>
+                    @row["Member_Adminname"]
+                </td>
+                <td>
+                    @row["Member_Adminpasswd"]
+                </td>
+            </tr>
+        }
+    }
+</table>*@
