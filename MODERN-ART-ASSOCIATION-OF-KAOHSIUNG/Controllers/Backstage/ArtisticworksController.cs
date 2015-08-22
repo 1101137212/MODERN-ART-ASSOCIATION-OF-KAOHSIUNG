@@ -10,8 +10,6 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
         public void CreateArtisticwork(Artisticworks Artisticworks)
         {
             c.Create(Artisticworks);
-            //string data = "test";
-            //return data;
         }
 
         public void DeleteArtisticwork(int Artisticworks_ID)
