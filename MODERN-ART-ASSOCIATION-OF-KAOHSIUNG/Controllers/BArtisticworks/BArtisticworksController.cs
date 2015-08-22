@@ -3,9 +3,9 @@ using System.Web.Mvc;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 {
-    public partial class ArtisticworksController : Controller
+    public partial class BArtisticworksController : Controller
     {
-        private Models.Artisticworksdata c = new Models.Artisticworksdata();
+        private Models.Backstage.BArtisticworksModel c = new Models.Backstage.BArtisticworksModel();
 
         public void CreateArtisticwork(Artisticworks Artisticworks)
         {

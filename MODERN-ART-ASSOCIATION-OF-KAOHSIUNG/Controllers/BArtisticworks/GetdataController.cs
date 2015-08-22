@@ -2,7 +2,7 @@
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 {
-    public partial class ArtisticworksController : Controller
+    public partial class BArtisticworksController : Controller
     {
         public string Getdata()
         {

@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $.ajax({
-        url: '/Artisticworks/GetData',
+        url: '/BArtisticworks/GetData',
         type: 'GET',
 
         dataType: 'json',
@@ -12,25 +12,25 @@
             console.log("無法取得db");
         }
     });
+    $.ajax({
+        url: '/BArtisticworks/CreateArtisticwork',
+        type: 'POST',
+        data: {
+            Artisticworks_Name: 'test444',
+            Artisticworks_Date: '2015/08/14',
+            Artisticworks_Picture: '暫無資料444',
+            Member_ID: 4
+        },
+        dataType: 'json',
+        success: function (data) {
+            console.log("test");
+        },
+        error: function () {
+            console.log("無法取得db");
+        }
+    });
     //$.ajax({
-    //    url: '/Artisticworks/CreateArtisticwork',
-    //    type: 'POST',
-    //    data: {
-    //        Artisticworks_Name: 'test22',
-    //        Artisticworks_Date: '2015/08/23',
-    //        Artisticworks_Picture: '暫無資料222',
-    //        Member_ID: 7
-    //    },
-    //    dataType: 'json',
-    //    success: function (data) {
-    //        console.log("test");
-    //    },
-    //    error: function () {
-    //        console.log("無法取得db");
-    //    }
-    //});
-    //$.ajax({
-    //    url: '/Artisticworks/UpdateArtisticwork',
+    //    url: '/BArtisticworks/UpdateArtisticwork',
     //    type: 'POST',
     //    data: {
     //        Artisticworks_Name: 'test111',
@@ -48,7 +48,7 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/Artisticworks/DeleteArtisticwork',
+    //    url: '/BArtisticworks/DeleteArtisticwork',
     //    type: 'POST',
     //    data: {
     //        Artisticworks_ID: 45,

@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
 
-namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BACKEND.Member
+namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 {
-    public class MemberController : Controller
+    public class BMemberController : Controller
     {
         private Models.Member m = new Models.Member();
 

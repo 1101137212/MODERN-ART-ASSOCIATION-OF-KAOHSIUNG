@@ -160,9 +160,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Backstage\ArtisticworksController.cs" />
-    <Compile Include="Controllers\Backstage\GetdataController.cs" />
-    <Compile Include="Controllers\Backstage\Member\MemberController.cs" />
+    <Compile Include="Controllers\BArtisticworks\BArtisticworksController.cs" />
+    <Compile Include="Controllers\BArtisticworks\GetdataController.cs" />
+    <Compile Include="Controllers\BMember\BMemberController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Member1Controller.cs" />
@@ -170,8 +170,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Artisticworks.cs" />
-    <Compile Include="Models\Artisticworksdata.cs" />
+    <Compile Include="Models\Backstage\Artisticworks\CreateArtisticworksModel.cs" />
+    <Compile Include="Models\TableModel\Artisticworks.cs" />
+    <Compile Include="Models\Backstage\Artisticworks\BArtisticworksModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Member.cs" />
@@ -241,13 +242,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Artisticworks\Index.cshtml" />
-    <Content Include="Views\Member\Index.cshtml" />
-    <Content Include="Views\Artisticworks\ViewPage1.cshtml" />
-    <Content Include="Views\Member\Index1.cshtml" />
+    <Content Include="Views\BArtisticworks\Index.cshtml" />
+    <Content Include="Views\BMember\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\BACKEND\" />
+    <Folder Include="Models\DefinedModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
