@@ -1,22 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
-using System.Web;
-using System.Reflection;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Web.Script;
-using System.Web.Script.Serialization;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
 {
     public class Artisticworksdata : SharedMethod
     {
+        public void Create(Artisticworks Artisticworks)
+        {
+            string sql = "INSERT INTO Artisticworks(Artisticworks_Name,Artisticworks_Date,Artisticworks_Picture,Member_ID) VALUES(@Artisticworks_Name,@Artisticworks_Date,@Artisticworks_Picture,@Member_ID)";
+            using (SqlConnection conn = new SqlConnection(@"Server=(LocalDB)\v11.0;DataBase=MAAK;Trusted_Connection=True;"))
+            {
+                conn.Open();
+                //int added = 0;
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Artisticworks_Name", Artisticworks.Artisticworks_Name);
+                    cmd.Parameters.AddWithValue("@Artisticworks_Date", Artisticworks.Artisticworks_Date);
+                    cmd.Parameters.AddWithValue("@Artisticworks_Picture", Artisticworks.Artisticworks_Picture);
+                    cmd.Parameters.AddWithValue("@Member_ID", Artisticworks.Member_ID);
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        
+
+                    }
+                    catch (Exception)
+                    {
+                        Console.Write("error");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                    
+                }
+            }
+        }
+
         public string GetArtisticworks()
         {
             string sql = "SELECT Artisticworks_Name,Artisticworks_Date,Artisticworks_Picture,Member_Name FROM Artisticworks LEFT JOIN Member ON Artisticworks.Member_ID = Member.Member_ID";
@@ -90,7 +111,6 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
         //reader.Close();
         //return Artisticworks;
 
-
         //using (SqlConnection conn = new SqlConnection(@"Server=(LocalDB)\v11.0;DataBase=MAAK;Trusted_Connection=True;"))
         //{
         //    string sql = "SELECT Artisticworks_Name,Artisticworks_Date,Artisticworks_Picture,Member_Name FROM Artisticworks LEFT JOIN Member ON Artisticworks.Member_ID = Member.Member_ID";
@@ -105,8 +125,6 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
         //        }
         //    }
         //}
-
-
 
         //DataSet db = new DataSet();
         //using (conn)
@@ -162,10 +180,5 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
         //            }
         //        }
         //    }
-
-
     }
-    
-        
-    
 }

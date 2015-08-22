@@ -1,28 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Script.Serialization;
+﻿using System.Web.Mvc;
+using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 {
     public partial class ArtisticworksController : Controller
     {
-        Models.Artisticworksdata c = new Models.Artisticworksdata();
+        private Models.Artisticworksdata c = new Models.Artisticworksdata();
+
         // GET: Artisticworks
         public ActionResult Index()
         {
-
             return View();
-
         }
 
+        public void CreateArtisticwork(Artisticworks Artisticworks)
+        {
+            c.Create(Artisticworks);
+            //string data = "test";
+            //return data;
+        }
         //public string Getdata()
         //{
         //    return c.GetArtisticworks();
-            
 
         //}
         //[HttpGet]
@@ -30,7 +29,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
         //{
         //    return c.GetArtisticworks();
         //}
-        
+
         //public JsonResult Index1()
         //{
         //    IEnumerable<System.Data.DataRow> Artisticworks = from row in c.GetArtisticworks() select row;

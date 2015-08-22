@@ -26,5 +26,9 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
             string sql = "SELECT * FROM Member";
             return ConnectDBToGetData(sql);
         }
+        //public string CreatMember(object insertdata)
+        //{
+
+        //}
     }
 }
