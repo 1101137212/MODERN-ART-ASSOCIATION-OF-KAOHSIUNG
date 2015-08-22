@@ -1,5 +1,4 @@
 ﻿using System.Web.Mvc;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BACKEND.Member
 {
@@ -20,7 +19,6 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BACKEND.Member
 
         //public string CreateMember()
         //{
-
         //}
     }
 }

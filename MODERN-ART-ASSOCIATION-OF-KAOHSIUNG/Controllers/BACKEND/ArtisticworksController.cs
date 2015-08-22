@@ -1,5 +1,5 @@
-﻿using System.Web.Mvc;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models;
+using System.Web.Mvc;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 {
@@ -7,18 +7,29 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
     {
         private Models.Artisticworksdata c = new Models.Artisticworksdata();
 
-        // GET: Artisticworks
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         public void CreateArtisticwork(Artisticworks Artisticworks)
         {
             c.Create(Artisticworks);
             //string data = "test";
             //return data;
         }
+
+        public void DeleteArtisticwork(int Artisticworks_ID)
+        {
+            c.Delete(Artisticworks_ID);
+        }
+
+        // GET: Artisticworks
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public void UpdateArtisticwork(Artisticworks Artisticworks)
+        {
+            c.Update(Artisticworks);
+        }
+
         //public string Getdata()
         //{
         //    return c.GetArtisticworks();
