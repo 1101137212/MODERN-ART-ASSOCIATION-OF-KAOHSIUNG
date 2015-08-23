@@ -175,8 +175,23 @@
     <Compile Include="Models\Backstage\Artisticworks\BArtisticworksModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Backstage\Member\BMemberModel.cs" />
     <Compile Include="Models\SharedMethod.cs" />
+    <Compile Include="Models\TableModel\AssociationEvent.cs" />
+    <Compile Include="Models\TableModel\AssociationHistory.cs" />
+    <Compile Include="Models\TableModel\AssociationRule.cs" />
+    <Compile Include="Models\TableModel\Award.cs" />
+    <Compile Include="Models\TableModel\AwardRecord.cs" />
+    <Compile Include="Models\TableModel\Exhibition.cs" />
+    <Compile Include="Models\TableModel\ExhibitionRecord.cs" />
+    <Compile Include="Models\TableModel\LatestNews.cs" />
+    <Compile Include="Models\TableModel\MediaReports.cs" />
+    <Compile Include="Models\TableModel\MeetingRecord.cs" />
+    <Compile Include="Models\TableModel\Member.cs" />
+    <Compile Include="Models\TableModel\Position.cs" />
+    <Compile Include="Models\TableModel\PositionRecord.cs" />
+    <Compile Include="Models\TableModel\ResearchField.cs" />
+    <Compile Include="Models\TableModel\ResearchFieldRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
