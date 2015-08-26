@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Script.Serialization;
+using System.Web.Configuration;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
 {
@@ -9,8 +10,8 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
     {
         public static string ConnectDBToGetData(string sql)
         {
-            DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection(@"Server=(LocalDB)\v11.0;DataBase=MAAK;Trusted_Connection=True;"))
+            DataTable dt = new DataTable(); //Server=(LocalDB)\v11.0;DataBase=MAAK;Trusted_Connection=True;
+            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {

@@ -12,32 +12,32 @@
             console.log("無法取得db");
         }
     });
-    $.ajax({
-        url: '/BArtisticworks/CreateArtisticwork',
-        type: 'POST',
-        data: {
-            Artisticworks_Name: 'test444',
-            Artisticworks_Date: '2015/08/14',
-            Artisticworks_Picture: '暫無資料444',
-            Member_ID: 4
-        },
-        dataType: 'json',
-        success: function (data) {
-            console.log("test");
-        },
-        error: function () {
-            console.log("無法取得db");
-        }
-    });
+    //$.ajax({
+    //    url: '/BArtisticworks/CreateArtisticwork',
+    //    type: 'POST',
+    //    data: {
+    //        Artisticworks_Name: 'test0826',
+    //        Artisticworks_Date: '2015/08/26',
+    //        Artisticworks_Picture: '暫無資料0826',
+    //        Member_ID: 5
+    //    },
+    //    dataType: 'json',
+    //    success: function (data) {
+    //        console.log("test");
+    //    },
+    //    error: function () {
+    //        console.log("無法取得db");
+    //    }
+    //});
     //$.ajax({
     //    url: '/BArtisticworks/UpdateArtisticwork',
     //    type: 'POST',
     //    data: {
-    //        Artisticworks_Name: 'test111',
-    //        Artisticworks_Date: '2015/08/12',
-    //        Artisticworks_Picture: '暫無資料12345',
-    //        Member_ID: 14,
-    //        Artisticworks_ID: 46
+    //        Artisticworks_Name: 'test08262',
+    //        Artisticworks_Date: '2015/08/27',
+    //        Artisticworks_Picture: '暫無資料08262',
+    //        Member_ID: 6,
+    //        Artisticworks_ID: 56
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -51,7 +51,7 @@
     //    url: '/BArtisticworks/DeleteArtisticwork',
     //    type: 'POST',
     //    data: {
-    //        Artisticworks_ID: 45,
+    //        Artisticworks_ID: 56,
     //    },
     //    dataType: 'json',
     //    success: function (data) {
