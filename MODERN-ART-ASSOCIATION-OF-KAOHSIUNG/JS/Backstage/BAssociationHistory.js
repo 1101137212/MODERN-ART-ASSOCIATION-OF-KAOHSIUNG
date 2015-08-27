@@ -1,10 +1,9 @@
 ﻿$(document).ready(function () {
     $.ajax({
-        url: '/BArtisticworks/GetData',
-        type: 'GET',
+        url: '/BAA/GetAssociationHistory',
+        type: 'POST',
         dataType: 'json',
         success: function (data) {
-            //data[0].Artisticworks_Date = "123";
             console.log(data);
         },
         error: function () {
@@ -12,13 +11,14 @@
         }
     });
     //$.ajax({
-    //    url: '/BArtisticworks/CreateArtisticwork',
+    //    url: '/BAA/CreateAssociationHistorydata',
     //    type: 'POST',
     //    data: {
-    //        Artisticworks_Name: 'test0826',
-    //        Artisticworks_Date: '2015/08/26',
-    //        Artisticworks_Picture: '暫無資料0826',
-    //        Member_ID: 5
+    //        AssociationHistory_Detail: 'test1',
+    //        AssociationHistory_Detail2: 'test2',
+    //        AssociationHistory_Detail3: 'test3',
+    //        AssociationHistory_Modifier: 5,
+    //        AssociationHistory_Modificationdatetime: '2015/08/26'
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -29,14 +29,15 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BArtisticworks/UpdateArtisticwork',
+    //    url: '/BAA/UpdateAssociationHistorydata',
     //    type: 'POST',
     //    data: {
-    //        Artisticworks_Name: 'test08262',
-    //        Artisticworks_Date: '2015/08/27',
-    //        Artisticworks_Picture: '暫無資料08262',
-    //        Member_ID: 6,
-    //        Artisticworks_ID: 56
+    //        AssociationHistory_Detail: 'test123',
+    //        AssociationHistory_Detail2: 'test234',
+    //        AssociationHistory_Detail3: 'test345',
+    //        AssociationHistory_Modifier: 6,
+    //        AssociationHistory_Modificationdatetime: '2015/08/26',
+    //        AssociationHistory_ID: 2
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -47,10 +48,10 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BArtisticworks/DeleteArtisticwork',
+    //    url: '/BAA/DeleteAssociationHistorydata',
     //    type: 'POST',
     //    data: {
-    //        Artisticworks_ID: 56,
+    //        AssociationHistory_ID: 3
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -60,4 +61,4 @@
     //        console.log("無法取得db");
     //    }
     //});
-});
+})

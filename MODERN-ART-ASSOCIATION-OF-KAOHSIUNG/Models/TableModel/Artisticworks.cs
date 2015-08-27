@@ -1,4 +1,4 @@
-﻿namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
+﻿namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel
 {
     public class Artisticworks
     {

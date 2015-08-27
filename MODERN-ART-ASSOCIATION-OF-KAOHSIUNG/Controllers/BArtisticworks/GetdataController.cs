@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models;
+using System.Web.Mvc;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 {

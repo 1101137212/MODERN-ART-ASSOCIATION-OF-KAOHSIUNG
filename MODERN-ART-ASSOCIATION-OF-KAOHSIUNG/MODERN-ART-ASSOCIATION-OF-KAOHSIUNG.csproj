@@ -160,6 +160,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BAA\BAAController.cs" />
+    <Compile Include="Controllers\BAA\BAssociationHistoryController.cs" />
     <Compile Include="Controllers\BArtisticworks\BArtisticworksController.cs" />
     <Compile Include="Controllers\BArtisticworks\GetdataController.cs" />
     <Compile Include="Controllers\BMember\BMemberController.cs" />
@@ -170,6 +172,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Backstage\AA\AssociationHistory\BAssociationHistoryModel.cs" />
+    <Compile Include="Models\Backstage\AA\AssociationHistory\CreateAssociationHistoryModel.cs" />
+    <Compile Include="Models\Backstage\AA\AssociationHistory\DeleteAssociationHistoryModel.cs" />
+    <Compile Include="Models\Backstage\AA\AssociationHistory\UpdateAssociationHistoryModel.cs" />
     <Compile Include="Models\Backstage\Artisticworks\CreateArtisticworksModel.cs" />
     <Compile Include="Models\TableModel\Artisticworks.cs" />
     <Compile Include="Models\Backstage\Artisticworks\BArtisticworksModel.cs" />
@@ -207,6 +213,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="JS\Artisticworks.js" />
+    <Content Include="JS\Backstage\BAssociationHistory.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -259,9 +266,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\BArtisticworks\Index.cshtml" />
     <Content Include="Views\BMember\Index.cshtml" />
+    <Content Include="Views\BAA\AssociationHistoryIndex.cshtml" />
+    <Content Include="Views\BAA\AssociationEventIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Models\Backstage\AA\AssociationEvent\" />
     <Folder Include="Models\DefinedModel\" />
+    <Folder Include="Views\BAssociationHistory\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
