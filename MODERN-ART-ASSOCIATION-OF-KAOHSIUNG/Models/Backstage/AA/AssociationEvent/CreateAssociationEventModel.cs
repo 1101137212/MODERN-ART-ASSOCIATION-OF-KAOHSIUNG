@@ -7,7 +7,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationEventModel : SharedMethod
     {
-        public void CreateAssociationEvent(AssociationEvent AssociationEvent)
+        public void CreateAssociationEvent_B(AssociationEvent AssociationEvent)
         {
             string sql = "INSERT INTO AssociationEvent(AssociationEvent_Title,AssociationEvent_Detail,AssociationEvent_Date,AssociationEvent_Picture,AssociationEvent_Modifier,AssociationEvent_Modificationdatetime) VALUES(@AssociationEvent_Title,@AssociationEvent_Detail,@AssociationEvent_Date,@AssociationEvent_Picture,@AssociationEvent_Modifier,@AssociationEvent_Modificationdatetime)";
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))

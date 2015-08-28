@@ -217,9 +217,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="JS\Artisticworks.js" />
-    <Content Include="JS\Backstage\BAssociationEvent.js" />
-    <Content Include="JS\Backstage\BAssociationHistory.js" />
+    <Content Include="JS\Backstage\Artisticworks.js" />
+    <Content Include="JS\Backstage\AA\AssociationEvent.js" />
+    <Content Include="JS\Backstage\AA\AssociationHistory.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -230,7 +230,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="JS\Member.js" />
+    <Content Include="JS\Backstage\Member.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />

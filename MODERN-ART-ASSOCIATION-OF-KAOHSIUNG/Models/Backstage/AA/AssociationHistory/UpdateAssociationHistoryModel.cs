@@ -7,7 +7,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationHistoryModel : SharedMethod
     {
-        public void UpdateAssociationHistory(AssociationHistory AssociationHistory)
+        public void UpdateAssociationHistory_B(AssociationHistory AssociationHistory)
         {
             string sql = "UPDATE AssociationHistory SET AssociationHistory_Detail=@AssociationHistory_Detail,AssociationHistory_Detail2=@AssociationHistory_Detail2,AssociationHistory_Detail3=@AssociationHistory_Detail3,AssociationHistory_Modifier=@AssociationHistory_Modifier,AssociationHistory_Modificationdatetime=@AssociationHistory_Modificationdatetime WHERE AssociationHistory_ID=@AssociationHistory_ID";
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))

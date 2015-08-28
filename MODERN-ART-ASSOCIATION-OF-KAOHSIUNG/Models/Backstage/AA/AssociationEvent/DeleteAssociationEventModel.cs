@@ -7,7 +7,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationEventModel : SharedMethod
     {
-        public void DeleteAssociationEvent(int AssociationEvent_ID)
+        public void DeleteAssociationEvent_B(int AssociationEvent_ID)
         {
             string sql = "DELETE FROM AssociationEvent WHERE AssociationEvent_ID=@AssociationEvent_ID";
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))

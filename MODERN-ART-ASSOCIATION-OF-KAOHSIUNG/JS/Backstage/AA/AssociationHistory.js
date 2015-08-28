@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $.ajax({
-        url: '/BAA/GetAssociationEventdata',
+        url: '/BAA/GetAssociationHistorydata_B',
         type: 'POST',
         dataType: 'json',
         success: function (data) {
@@ -11,15 +11,14 @@
         }
     });
     //$.ajax({
-    //    url: '/BAA/CreateAssociationEventdata',
+    //    url: '/BAA/CreateAssociationHistorydata_B',
     //    type: 'POST',
     //    data: {
-    //        AssociationEvent_Title: 'test1',
-    //        AssociationEvent_Detail: 'test2',
-    //        AssociationEvent_Date: '2015/08/28',
-    //        AssociationEvent_Picture: 'test',
-    //        AssociationEvent_Modifier: 5,
-    //        AssociationEvent_Modificationdatetime:'2015/08/28'
+    //        AssociationHistory_Detail: 'test1',
+    //        AssociationHistory_Detail2: 'test2',
+    //        AssociationHistory_Detail3: 'test3',
+    //        AssociationHistory_Modifier: 5,
+    //        AssociationHistory_Modificationdatetime: '2015/08/26'
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -30,16 +29,15 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BAA/UpdateAssociationEventdata',
+    //    url: '/BAA/UpdateAssociationHistorydata_B',
     //    type: 'POST',
     //    data: {
-    //        AssociationEvent_Title: 'test123',
-    //        AssociationEvent_Detail: 'test234',
-    //        AssociationEvent_Date: '2015/08/27',
-    //        AssociationEvent_Picture: 'test',
-    //        AssociationEvent_Modifier: 4,
-    //        AssociationEvent_Modificationdatetime:'2015/08/27',
-    //        AssociationEvent_ID: 6
+    //        AssociationHistory_Detail: 'test123',
+    //        AssociationHistory_Detail2: 'test234',
+    //        AssociationHistory_Detail3: 'test345',
+    //        AssociationHistory_Modifier: 6,
+    //        AssociationHistory_Modificationdatetime: '2015/08/26',
+    //        AssociationHistory_ID: 2
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -50,10 +48,10 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BAA/DeleteAssociationEventdata',
+    //    url: '/BAA/DeleteAssociationHistorydata_B',
     //    type: 'POST',
     //    data: {
-    //        AssociationEvent_ID: 7
+    //        AssociationHistory_ID: 3
     //    },
     //    dataType: 'json',
     //    success: function (data) {
