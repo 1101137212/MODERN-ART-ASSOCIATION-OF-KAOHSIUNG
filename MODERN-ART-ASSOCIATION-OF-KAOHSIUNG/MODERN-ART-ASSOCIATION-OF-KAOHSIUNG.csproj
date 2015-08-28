@@ -164,6 +164,9 @@
     <Compile Include="Controllers\BAA\BAssociationEventController.cs" />
     <Compile Include="Controllers\BAA\BAssociationHistoryController.cs" />
     <Compile Include="Controllers\BAWS\BAWSController.cs" />
+    <Compile Include="Controllers\BCF\BCFController.cs" />
+    <Compile Include="Controllers\BEX\BEXController.cs" />
+    <Compile Include="Controllers\BLN\BLNController.cs" />
     <Compile Include="Controllers\BMEM\BMEMController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -278,7 +281,13 @@
     <Content Include="Views\BAA\AssociationOrganizationIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Models\Backstage\CF\" />
+    <Folder Include="Models\Backstage\EX\" />
+    <Folder Include="Models\Backstage\LN\" />
     <Folder Include="Models\DefinedModel\" />
+    <Folder Include="Views\BCF\" />
+    <Folder Include="Views\BEX\" />
+    <Folder Include="Views\BLN\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
