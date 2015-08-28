@@ -10,11 +10,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BAA
 {
     public partial class BAAController : Controller
     {
-        public string GetAssociationHistory()
+        public string GetAssociationHistorydata()
         {
             return AH.GetAssociationHistory();
         }
-
         public void CreateAssociationHistorydata(AssociationHistory AssociationHistory)
         {
             AH.CreateAssociationHistory(AssociationHistory);
