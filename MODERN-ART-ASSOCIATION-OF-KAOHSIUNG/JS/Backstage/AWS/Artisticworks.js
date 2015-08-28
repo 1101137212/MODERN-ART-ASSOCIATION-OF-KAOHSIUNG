@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $.ajax({
-        url: '/BArtisticworks/GetData',
+        url: '/BAWS/GetArtisticworksdata_B',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -12,7 +12,7 @@
         }
     });
     //$.ajax({
-    //    url: '/BArtisticworks/CreateArtisticwork',
+    //    url: '/BAWS/CreateArtisticworksdata_B',
     //    type: 'POST',
     //    data: {
     //        Artisticworks_Name: 'test0826',
@@ -29,7 +29,7 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BArtisticworks/UpdateArtisticwork',
+    //    url: '/BAWS/UpdateArtisticworksdata_B',
     //    type: 'POST',
     //    data: {
     //        Artisticworks_Name: 'test08262',
@@ -47,7 +47,7 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BArtisticworks/DeleteArtisticwork',
+    //    url: '/BAWS/DeleteArtisticworksdata_B',
     //    type: 'POST',
     //    data: {
     //        Artisticworks_ID: 56,

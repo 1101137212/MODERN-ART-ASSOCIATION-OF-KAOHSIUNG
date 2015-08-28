@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $.ajax({
-        url: '/BMember/GetMemberdata',
+        url: '/BMEM/GetMemberdata',
         type: 'GET',
 
         dataType: 'json',

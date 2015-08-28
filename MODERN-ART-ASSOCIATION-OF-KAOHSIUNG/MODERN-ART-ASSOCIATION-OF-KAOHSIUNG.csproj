@@ -163,9 +163,8 @@
     <Compile Include="Controllers\BAA\BAAController.cs" />
     <Compile Include="Controllers\BAA\BAssociationEventController.cs" />
     <Compile Include="Controllers\BAA\BAssociationHistoryController.cs" />
-    <Compile Include="Controllers\BArtisticworks\BArtisticworksController.cs" />
-    <Compile Include="Controllers\BArtisticworks\GetdataController.cs" />
-    <Compile Include="Controllers\BMember\BMemberController.cs" />
+    <Compile Include="Controllers\BAWS\BAWSController.cs" />
+    <Compile Include="Controllers\BMEM\BMEMController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Member1Controller.cs" />
@@ -181,12 +180,14 @@
     <Compile Include="Models\Backstage\AA\AssociationHistory\CreateAssociationHistoryModel.cs" />
     <Compile Include="Models\Backstage\AA\AssociationHistory\DeleteAssociationHistoryModel.cs" />
     <Compile Include="Models\Backstage\AA\AssociationHistory\UpdateAssociationHistoryModel.cs" />
-    <Compile Include="Models\Backstage\Artisticworks\CreateArtisticworksModel.cs" />
+    <Compile Include="Models\Backstage\AWS\CreateArtisticworksModel.cs" />
+    <Compile Include="Models\Backstage\AWS\DeleteArtisticworksModel.cs" />
+    <Compile Include="Models\Backstage\AWS\UpdateArtisticworksModel.cs" />
     <Compile Include="Models\TableModel\Artisticworks.cs" />
-    <Compile Include="Models\Backstage\Artisticworks\BArtisticworksModel.cs" />
+    <Compile Include="Models\Backstage\AWS\BArtisticworksModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Backstage\Member\BMemberModel.cs" />
+    <Compile Include="Models\Backstage\MEM\BMemberModel.cs" />
     <Compile Include="Models\SharedMethod.cs" />
     <Compile Include="Models\TableModel\AssociationEvent.cs" />
     <Compile Include="Models\TableModel\AssociationHistory.cs" />
@@ -217,7 +218,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="JS\Backstage\Artisticworks.js" />
+    <Content Include="JS\Backstage\AWS\Artisticworks.js" />
     <Content Include="JS\Backstage\AA\AssociationEvent.js" />
     <Content Include="JS\Backstage\AA\AssociationHistory.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -230,7 +231,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="JS\Backstage\Member.js" />
+    <Content Include="JS\Backstage\MEM\Member.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -270,16 +271,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\BArtisticworks\Index.cshtml" />
-    <Content Include="Views\BMember\Index.cshtml" />
+    <Content Include="Views\BAWS\ArtisticworksIndex.cshtml" />
+    <Content Include="Views\BMEM\MemberIndex.cshtml" />
     <Content Include="Views\BAA\AssociationHistoryIndex.cshtml" />
     <Content Include="Views\BAA\AssociationEventIndex.cshtml" />
     <Content Include="Views\BAA\AssociationOrganizationIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\DefinedModel\" />
-    <Folder Include="Views\BAssociationEvent\" />
-    <Folder Include="Views\BAssociationHistory\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
