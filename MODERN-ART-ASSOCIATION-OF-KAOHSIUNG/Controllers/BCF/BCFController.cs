@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
 {
-    public class BCFController : Controller
+    public partial class BCFController : Controller
     {
+        private BAssociationRuleModel AR = new BAssociationRuleModel();
         // GET: BCF
-        public ActionResult Index()
+        public ActionResult AssociationRuleIndex()
         {
             return View();
         }

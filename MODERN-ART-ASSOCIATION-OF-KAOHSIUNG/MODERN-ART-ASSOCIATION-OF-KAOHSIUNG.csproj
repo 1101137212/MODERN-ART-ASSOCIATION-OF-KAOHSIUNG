@@ -164,9 +164,12 @@
     <Compile Include="Controllers\BAA\BAssociationEventController.cs" />
     <Compile Include="Controllers\BAA\BAssociationHistoryController.cs" />
     <Compile Include="Controllers\BAWS\BAWSController.cs" />
+    <Compile Include="Controllers\BCF\BAssociationRuleController.cs" />
     <Compile Include="Controllers\BCF\BCFController.cs" />
     <Compile Include="Controllers\BEX\BEXController.cs" />
+    <Compile Include="Controllers\BLN\BAwardController.cs" />
     <Compile Include="Controllers\BLN\BLNController.cs" />
+    <Compile Include="Controllers\BLN\BMediaReportsController.cs" />
     <Compile Include="Controllers\BMEM\BMEMController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -186,6 +189,18 @@
     <Compile Include="Models\Backstage\AWS\CreateArtisticworksModel.cs" />
     <Compile Include="Models\Backstage\AWS\DeleteArtisticworksModel.cs" />
     <Compile Include="Models\Backstage\AWS\UpdateArtisticworksModel.cs" />
+    <Compile Include="Models\Backstage\CF\AssociationRule\BAssociationRuleModel.cs" />
+    <Compile Include="Models\Backstage\CF\AssociationRule\CreateAssociationRuleModel.cs" />
+    <Compile Include="Models\Backstage\CF\AssociationRule\DeleteAssociationRuleModel.cs" />
+    <Compile Include="Models\Backstage\CF\AssociationRule\UpdateAssociationRuleModel.cs" />
+    <Compile Include="Models\Backstage\LN\Award\BAwardModel.cs" />
+    <Compile Include="Models\Backstage\LN\Award\CreateAwardModel.cs" />
+    <Compile Include="Models\Backstage\LN\Award\DeleteAwardModel.cs" />
+    <Compile Include="Models\Backstage\LN\Award\UpdateAwardModel.cs" />
+    <Compile Include="Models\Backstage\LN\MediaReports\BMediaReportsModel.cs" />
+    <Compile Include="Models\Backstage\LN\MediaReports\CreateMediaReportsModel.cs" />
+    <Compile Include="Models\Backstage\LN\MediaReports\DeleteMediaReportsModel.cs" />
+    <Compile Include="Models\Backstage\LN\MediaReports\UpdateMediaReportsModel.cs" />
     <Compile Include="Models\TableModel\Artisticworks.cs" />
     <Compile Include="Models\Backstage\AWS\BArtisticworksModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -224,6 +239,9 @@
     <Content Include="JS\Backstage\AWS\Artisticworks.js" />
     <Content Include="JS\Backstage\AA\AssociationEvent.js" />
     <Content Include="JS\Backstage\AA\AssociationHistory.js" />
+    <Content Include="JS\Backstage\CF\AssociationRule.js" />
+    <Content Include="JS\Backstage\LN\Award.js" />
+    <Content Include="JS\Backstage\LN\MediaReports.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -279,15 +297,16 @@
     <Content Include="Views\BAA\AssociationHistoryIndex.cshtml" />
     <Content Include="Views\BAA\AssociationEventIndex.cshtml" />
     <Content Include="Views\BAA\AssociationOrganizationIndex.cshtml" />
+    <Content Include="Views\BLN\MediaReportsIndex.cshtml" />
+    <Content Include="Views\BLN\AwardIndex.cshtml" />
+    <Content Include="Views\BCF\AssociationRuleIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Backstage\CF\" />
+    <Folder Include="JS\Backstage\EX\" />
     <Folder Include="Models\Backstage\EX\" />
-    <Folder Include="Models\Backstage\LN\" />
+    <Folder Include="Models\Backstage\LN\AwardRecord\" />
     <Folder Include="Models\DefinedModel\" />
-    <Folder Include="Views\BCF\" />
     <Folder Include="Views\BEX\" />
-    <Folder Include="Views\BLN\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
