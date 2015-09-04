@@ -12,6 +12,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
     {
         private BMediaReportsModel MDR = new BMediaReportsModel();
         private BAwardModel AW = new BAwardModel();
+        private BAwardRecordModel AWR = new BAwardRecordModel();
         // GET: BLN
         public ActionResult MediaReportsIndex()
         {
