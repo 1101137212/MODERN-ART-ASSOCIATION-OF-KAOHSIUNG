@@ -1,0 +1,48 @@
+.workpic {
+     width: auto;
+     height: auto;
+     max-width: 100%;
+     max-height: 100%;
+     background-position: center center;
+     float:left; 
+     margin-right:10px;
+     width:180px;
+     height:180px;
+     border:1px solid #666; 
+     background-color:#000;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size:cover;
+}
+
+.worktitle{
+    font-size: 30pt;
+    text-align: center;
+    color: rgb(59,14,7);
+}
+
+.workmember{
+    font-size: 15pt;
+    text-align: center;
+    color: rgb(59,14,7);
+}
+
+/*height equal width*/
+.circle {/*
+    width: 200px;
+    height: 200px;*/
+    position: relative;
+    width: 100%;
+    height: auto;
+    -moz-border-radius: 100%; 
+    -webkit-border-radius: 100%; 
+    border-radius: 100%;
+    background: rgb(183,152,108);
+    border:5px solid rgb(183,152,108);
+    background-size:cover;
+}
+.circle:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}

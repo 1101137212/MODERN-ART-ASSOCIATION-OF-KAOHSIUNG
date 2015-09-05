@@ -1,0 +1,12 @@
+.event{
+	border-bottom: 3px dashed black ;
+	/*	border-top: 3px dashed black;*/
+	padding-top: 10px;padding-bottom: 10px;
+}
+.eventtitle{
+	color: rgb(158,52,38);
+	text-decoration:underline;
+}
+.eventexplain{
+	
+}
