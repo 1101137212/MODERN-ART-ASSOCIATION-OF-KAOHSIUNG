@@ -176,6 +176,7 @@
     <Compile Include="Controllers\BMEM\BMemberController.cs" />
     <Compile Include="Controllers\BMEM\BMEMController.cs" />
     <Compile Include="Controllers\BMEM\BPositionController.cs" />
+    <Compile Include="Controllers\BMEM\BPositionRecordController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Member1Controller.cs" />
@@ -221,6 +222,10 @@
     <Compile Include="Models\Backstage\MEM\Member\CreateMemberModel.cs" />
     <Compile Include="Models\Backstage\MEM\Member\DeleteMemberModel.cs" />
     <Compile Include="Models\Backstage\MEM\Member\UpdateMemberModel.cs" />
+    <Compile Include="Models\Backstage\MEM\PositionRecord\BPositionRecordModel.cs" />
+    <Compile Include="Models\Backstage\MEM\PositionRecord\CreatePositionRecordModel.cs" />
+    <Compile Include="Models\Backstage\MEM\PositionRecord\DeletePositionRecordModel.cs" />
+    <Compile Include="Models\Backstage\MEM\PositionRecord\UpdatePositionRecordModel.cs" />
     <Compile Include="Models\Backstage\MEM\Position\BPositionModel.cs" />
     <Compile Include="Models\Backstage\MEM\Position\CreatePositionModel.cs" />
     <Compile Include="Models\Backstage\MEM\Position\DeletePositionModel.cs" />
@@ -270,6 +275,7 @@
     <Content Include="JS\Backstage\LN\AwardRecord.js" />
     <Content Include="JS\Backstage\LN\MediaReports.js" />
     <Content Include="JS\Backstage\MEM\Position.js" />
+    <Content Include="JS\Backstage\MEM\PositionRecord.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -333,10 +339,10 @@
   <ItemGroup>
     <Folder Include="Models\Backstage\EX\ExhibitionNews\" />
     <Folder Include="Models\Backstage\LN\LatestNews\" />
-    <Folder Include="Models\Backstage\MEM\PositionRecord\" />
     <Folder Include="Models\Backstage\MEM\ResearchFieldRecord\" />
     <Folder Include="Models\Backstage\MEM\ResearchField\" />
     <Folder Include="Models\DefinedModel\" />
+    <Folder Include="Views\BPositionRecord\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

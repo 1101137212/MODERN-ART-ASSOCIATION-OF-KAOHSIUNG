@@ -12,6 +12,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
     {
         private BMemberModel MEM = new BMemberModel();
         private BPositionModel P = new BPositionModel();
+        private BPositionRecordModel PR = new BPositionRecordModel();
         
         public ActionResult MemberIndex()
         {
