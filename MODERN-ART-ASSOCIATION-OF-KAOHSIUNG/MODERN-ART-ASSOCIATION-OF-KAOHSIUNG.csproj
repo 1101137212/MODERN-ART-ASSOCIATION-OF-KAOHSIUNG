@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -259,9 +260,21 @@
     <Content Include="App_Data\MAAK_log.ldf">
       <DependentUpon>MAAK.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\events.css" />
+    <Content Include="Content\exhibition.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\nav.css" />
+    <Content Include="Content\news.css" />
+    <Content Include="Content\prize.css" />
+    <Content Include="Content\workcollection.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -278,19 +291,100 @@
     <Content Include="JS\Backstage\MEM\PositionRecord.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="JS\Backstage\MEM\Member.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr.custom.min.js" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\artistsindex.html" />
+    <Content Include="Views\events.html" />
+    <Content Include="Views\exhibition.html" />
+    <Content Include="Views\img\Artist\0-1.jpg" />
+    <Content Include="Views\img\Artist\0.jpg" />
+    <Content Include="Views\img\Artist\1-1.jpg" />
+    <Content Include="Views\img\Artist\1.jpg" />
+    <Content Include="Views\img\Artist\10-1.jpg" />
+    <Content Include="Views\img\Artist\10.jpg" />
+    <Content Include="Views\img\Artist\11-1.jpg" />
+    <Content Include="Views\img\Artist\11.jpg" />
+    <Content Include="Views\img\Artist\12-1.jpg" />
+    <Content Include="Views\img\Artist\12.jpg" />
+    <Content Include="Views\img\Artist\13.jpg" />
+    <Content Include="Views\img\Artist\14.jpg" />
+    <Content Include="Views\img\Artist\2-1.jpg" />
+    <Content Include="Views\img\Artist\2.jpg" />
+    <Content Include="Views\img\Artist\3-1.jpg" />
+    <Content Include="Views\img\Artist\3.jpg" />
+    <Content Include="Views\img\Artist\4-1.jpg" />
+    <Content Include="Views\img\Artist\4.jpg" />
+    <Content Include="Views\img\Artist\5-1.jpg" />
+    <Content Include="Views\img\Artist\5.jpg" />
+    <Content Include="Views\img\Artist\6-1.jpg" />
+    <Content Include="Views\img\Artist\6.jpg" />
+    <Content Include="Views\img\Artist\7-1.jpg" />
+    <Content Include="Views\img\Artist\7.jpg" />
+    <Content Include="Views\img\Artist\8-1.jpg" />
+    <Content Include="Views\img\Artist\8.jpg" />
+    <Content Include="Views\img\Artist\9-1.jpg" />
+    <Content Include="Views\img\Artist\9.jpg" />
+    <Content Include="Views\img\Artist\AboutArtists.png" />
+    <Content Include="Views\img\bg.png" />
+    <Content Include="Views\img\carousel1.jpg" />
+    <Content Include="Views\img\carousel2.jpg" />
+    <Content Include="Views\img\carousel3.jpg" />
+    <Content Include="Views\img\carousel4.jpg" />
+    <Content Include="Views\img\cell.png" />
+    <Content Include="Views\img\detail.png" />
+    <Content Include="Views\img\detailclick.png" />
+    <Content Include="Views\img\event1.png" />
+    <Content Include="Views\img\event2.png" />
+    <Content Include="Views\img\event\1.jpg" />
+    <Content Include="Views\img\event\2.jpg" />
+    <Content Include="Views\img\event\3.jpg" />
+    <Content Include="Views\img\event\4.jpg" />
+    <Content Include="Views\img\event\5.jpg" />
+    <Content Include="Views\img\ex1.png" />
+    <Content Include="Views\img\ex2.png" />
+    <Content Include="Views\img\history.jpg" />
+    <Content Include="Views\img\indexbg.png" />
+    <Content Include="Views\img\logo.png" />
+    <Content Include="Views\img\nulogo.png" />
+    <Content Include="Views\img\organization.png" />
+    <Content Include="Views\img\prize1.png" />
+    <Content Include="Views\img\prize2.png" />
+    <Content Include="Views\img\prize3.png" />
+    <Content Include="Views\img\prizelogo.png" />
+    <Content Include="Views\img\slogo.png" />
+    <Content Include="Views\img\sprites.png" />
+    <Content Include="Views\img\works\w1.png" />
+    <Content Include="Views\index.html" />
+    <Content Include="Views\member.html" />
+    <Content Include="Views\news.html" />
+    <Content Include="Views\prize.html" />
+    <Content Include="Views\rule.html" />
+    <Content Include="Views\WorkCollection.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -335,6 +429,7 @@
     <Content Include="Views\BLN\AwardIndex.cshtml" />
     <Content Include="Views\BCF\AssociationRuleIndex.cshtml" />
     <Content Include="Views\BEX\ExhibitionIndex.cshtml" />
+    <Content Include="Scripts\main.js.bak" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Backstage\EX\ExhibitionNews\" />
