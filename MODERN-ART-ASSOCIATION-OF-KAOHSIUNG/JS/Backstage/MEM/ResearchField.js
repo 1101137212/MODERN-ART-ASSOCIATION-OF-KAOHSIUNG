@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $.ajax({
-        url: '/BMEM/GetPositionRecorddata_B',
+        url: '/BMEM/GetResearchFielddata_B',
         type: 'POST',
         dataType: 'json',
         success: function (data) {
@@ -11,14 +11,10 @@
         }
     });
     //$.ajax({
-    //    url: '/BMEM/CreatePositionRecorddata_B',
+    //    url: '/BMEM/CreateResearchFielddata_B',
     //    type: 'POST',
     //    data: {
-    //        PositionRecord_Startdate: '2015/09/05',
-    //        PositionRecord_Enddate: '2015/09/05',
-    //        Member_ID: 1,
-    //        Position_ID: 1,
-    //        MeetingRecord_ID: 1
+    //        ResearchField_Name: 'test'
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -29,12 +25,11 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BMEM/UpdatePositionRecorddata_B',
+    //    url: '/BMEM/UpdateResearchFielddata_B',
     //    type: 'POST',
     //    data: {
-    //        Position_Name: 'test11',
-    //        Position_Competence: '2',
-    //        Position_ID: 15
+    //        ResearchField_Name: 'test111',
+    //        ResearchField_ID: 31
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -45,10 +40,10 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BMEM/DeletePositionRecorddata_B',
+    //    url: '/BMEM/DeleteResearchFielddata_B',
     //    type: 'POST',
     //    data: {
-    //        Position_ID: 16
+    //        ResearchField_ID: 31
     //    },
     //    dataType: 'json',
     //    success: function (data) {

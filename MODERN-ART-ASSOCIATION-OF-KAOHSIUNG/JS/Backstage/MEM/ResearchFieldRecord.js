@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $.ajax({
-        url: '/BMEM/GetPositionRecorddata_B',
+        url: '/BMEM/GetResearchFieldRecorddata_B',
         type: 'POST',
         dataType: 'json',
         success: function (data) {
@@ -11,14 +11,12 @@
         }
     });
     //$.ajax({
-    //    url: '/BMEM/CreatePositionRecorddata_B',
+    //    url: '/BMEM/CreateResearchFieldRecorddata_B',
     //    type: 'POST',
     //    data: {
-    //        PositionRecord_Startdate: '2015/09/05',
-    //        PositionRecord_Enddate: '2015/09/05',
-    //        Member_ID: 1,
-    //        Position_ID: 1,
-    //        MeetingRecord_ID: 1
+    //        ResearchFieldRecord_Date: '2015/09/09',
+    //        Member_ID: 6,
+    //        ResearchField_ID:1
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -29,12 +27,13 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BMEM/UpdatePositionRecorddata_B',
+    //    url: '/BMEM/UpdateResearchFieldRecorddata_B',
     //    type: 'POST',
     //    data: {
-    //        Position_Name: 'test11',
-    //        Position_Competence: '2',
-    //        Position_ID: 15
+    //        ResearchFieldRecord_Date: '2015/09/09',
+    //        Member_ID: 7,
+    //        ResearchField_ID:2,
+    //        ResearchFieldRecord_ID: 36
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -45,10 +44,10 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BMEM/DeletePositionRecorddata_B',
+    //    url: '/BMEM/DeleteResearchFieldRecorddata_B',
     //    type: 'POST',
     //    data: {
-    //        Position_ID: 16
+    //        ResearchFieldRecord_ID: 36
     //    },
     //    dataType: 'json',
     //    success: function (data) {

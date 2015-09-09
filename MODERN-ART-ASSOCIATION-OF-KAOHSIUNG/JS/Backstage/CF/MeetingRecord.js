@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $.ajax({
-        url: '/BMEM/GetPositionRecorddata_B',
+        url: '/BCF/GetMeetingRecorddata_B',
         type: 'POST',
         dataType: 'json',
         success: function (data) {
@@ -11,14 +11,17 @@
         }
     });
     //$.ajax({
-    //    url: '/BMEM/CreatePositionRecorddata_B',
+    //    url: '/BCF/CreateMeetingRecorddata_B',
     //    type: 'POST',
     //    data: {
-    //        PositionRecord_Startdate: '2015/09/05',
-    //        PositionRecord_Enddate: '2015/09/05',
-    //        Member_ID: 1,
-    //        Position_ID: 1,
-    //        MeetingRecord_ID: 1
+    //        MeetingRecord_Title: 'test333',
+    //        MeetingRecord_Detail: 'test',
+    //        MeetingRecord_Date: '2015/08/30',
+    //        MeetingRecord_Starttime: '10:00:00',
+    //        MeetingRecord_Endtime: '11:00:00',
+    //        MeetingRecord_Place: 'test',
+    //        MeetingRecord_File: 'test',
+    //        MeetingRecord_Modificationdatetime: '11:00:00'
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -29,12 +32,18 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BMEM/UpdatePositionRecorddata_B',
+    //    url: '/BCF/UpdateMeetingRecorddata_B',
     //    type: 'POST',
     //    data: {
-    //        Position_Name: 'test11',
-    //        Position_Competence: '2',
-    //        Position_ID: 15
+    //        MeetingRecord_Title: 'test333456',
+    //        MeetingRecord_Detail: 'test111',
+    //        MeetingRecord_Date: '2015/08/31',
+    //        MeetingRecord_Starttime: '11:00:00',
+    //        MeetingRecord_Endtime: '12:00:00',
+    //        MeetingRecord_Place: 'test111',
+    //        MeetingRecord_File: 'test111',
+    //        MeetingRecord_Modificationdatetime: '13:00:00',
+    //        MeetingRecord_ID: 6
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -45,10 +54,10 @@
     //    }
     //});
     //$.ajax({
-    //    url: '/BMEM/DeletePositionRecorddata_B',
+    //    url: '/BCF/DeleteMeetingRecorddata_B',
     //    type: 'POST',
     //    data: {
-    //        Position_ID: 16
+    //        MeetingRecord_ID: 6
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -58,4 +67,4 @@
     //        console.log("無法取得db");
     //    }
     //});
-});
+})

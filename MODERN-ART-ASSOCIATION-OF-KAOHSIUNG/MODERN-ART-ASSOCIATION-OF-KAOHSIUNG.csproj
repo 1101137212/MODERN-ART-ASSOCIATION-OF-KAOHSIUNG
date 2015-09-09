@@ -167,6 +167,7 @@
     <Compile Include="Controllers\BAWS\BAWSController.cs" />
     <Compile Include="Controllers\BCF\BAssociationRuleController.cs" />
     <Compile Include="Controllers\BCF\BCFController.cs" />
+    <Compile Include="Controllers\BCF\BMeetingRecordController.cs" />
     <Compile Include="Controllers\BEX\BEXController.cs" />
     <Compile Include="Controllers\BEX\BExhibitionController.cs" />
     <Compile Include="Controllers\BEX\BExhibitionRecordController.cs" />
@@ -178,6 +179,8 @@
     <Compile Include="Controllers\BMEM\BMEMController.cs" />
     <Compile Include="Controllers\BMEM\BPositionController.cs" />
     <Compile Include="Controllers\BMEM\BPositionRecordController.cs" />
+    <Compile Include="Controllers\BMEM\BResearchFieldController.cs" />
+    <Compile Include="Controllers\BMEM\BResearchFieldRecordController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Member1Controller.cs" />
@@ -200,6 +203,10 @@
     <Compile Include="Models\Backstage\CF\AssociationRule\CreateAssociationRuleModel.cs" />
     <Compile Include="Models\Backstage\CF\AssociationRule\DeleteAssociationRuleModel.cs" />
     <Compile Include="Models\Backstage\CF\AssociationRule\UpdateAssociationRuleModel.cs" />
+    <Compile Include="Models\Backstage\CF\MeetingRecord\BMeetingRecordModel.cs" />
+    <Compile Include="Models\Backstage\CF\MeetingRecord\CreateMeetingRecordModel.cs" />
+    <Compile Include="Models\Backstage\CF\MeetingRecord\DeleteMeetingRecordModel.cs" />
+    <Compile Include="Models\Backstage\CF\MeetingRecord\UpdateMeetingRecordModel.cs" />
     <Compile Include="Models\Backstage\EX\ExhibitionRecord\BExhibitionRecordModel.cs" />
     <Compile Include="Models\Backstage\EX\ExhibitionRecord\CreateExhibitionRecordModel.cs" />
     <Compile Include="Models\Backstage\EX\ExhibitionRecord\DeleteExhibitionRecordModel.cs" />
@@ -231,6 +238,14 @@
     <Compile Include="Models\Backstage\MEM\Position\CreatePositionModel.cs" />
     <Compile Include="Models\Backstage\MEM\Position\DeletePositionModel.cs" />
     <Compile Include="Models\Backstage\MEM\Position\UpdatePositionModel.cs" />
+    <Compile Include="Models\Backstage\MEM\ResearchFieldRecord\BResearchFieldRecordModel.cs" />
+    <Compile Include="Models\Backstage\MEM\ResearchFieldRecord\CreateResearchFieldRecordModel.cs" />
+    <Compile Include="Models\Backstage\MEM\ResearchFieldRecord\DeleteResearchFieldRecordModel.cs" />
+    <Compile Include="Models\Backstage\MEM\ResearchFieldRecord\UpdateResearchFieldRecordModel.cs" />
+    <Compile Include="Models\Backstage\MEM\ResearchField\BResearchFieldModel.cs" />
+    <Compile Include="Models\Backstage\MEM\ResearchField\CreateResearchFieldModel.cs" />
+    <Compile Include="Models\Backstage\MEM\ResearchField\DeleteResearchFieldModel.cs" />
+    <Compile Include="Models\Backstage\MEM\ResearchField\UpdateResearchFieldModel.cs" />
     <Compile Include="Models\TableModel\Artisticworks.cs" />
     <Compile Include="Models\Backstage\AWS\BArtisticworksModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -282,6 +297,7 @@
     <Content Include="JS\Backstage\AA\AssociationEvent.js" />
     <Content Include="JS\Backstage\AA\AssociationHistory.js" />
     <Content Include="JS\Backstage\CF\AssociationRule.js" />
+    <Content Include="JS\Backstage\CF\MeetingRecord.js" />
     <Content Include="JS\Backstage\EX\Exhibition.js" />
     <Content Include="JS\Backstage\EX\ExhibitionRecord.js" />
     <Content Include="JS\Backstage\LN\Award.js" />
@@ -289,6 +305,8 @@
     <Content Include="JS\Backstage\LN\MediaReports.js" />
     <Content Include="JS\Backstage\MEM\Position.js" />
     <Content Include="JS\Backstage\MEM\PositionRecord.js" />
+    <Content Include="JS\Backstage\MEM\ResearchField.js" />
+    <Content Include="JS\Backstage\MEM\ResearchFieldRecord.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\bootstrap-theme.css.map" />
@@ -430,14 +448,13 @@
     <Content Include="Views\BCF\AssociationRuleIndex.cshtml" />
     <Content Include="Views\BEX\ExhibitionIndex.cshtml" />
     <Content Include="Scripts\main.js.bak" />
+    <Content Include="Views\BCF\MeetingRecordIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Models\Backstage\CF\MeetingNews\" />
     <Folder Include="Models\Backstage\EX\ExhibitionNews\" />
     <Folder Include="Models\Backstage\LN\LatestNews\" />
-    <Folder Include="Models\Backstage\MEM\ResearchFieldRecord\" />
-    <Folder Include="Models\Backstage\MEM\ResearchField\" />
     <Folder Include="Models\DefinedModel\" />
-    <Folder Include="Views\BPositionRecord\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
