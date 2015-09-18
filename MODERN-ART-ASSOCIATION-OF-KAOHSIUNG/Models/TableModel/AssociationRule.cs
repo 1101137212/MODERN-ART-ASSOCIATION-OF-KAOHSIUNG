@@ -3,6 +3,11 @@
     public class AssociationRule
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "AssociationRule"; } }
+        
+        /// <summary>
         /// 學會規章詳細資料
         /// </summary>
         public string AssociationRule_Detail { get; set; }
@@ -26,5 +31,10 @@
         /// 學會規章標題
         /// </summary>
         public string AssociationRule_Title { get; set; }
+
+        public void PK_AssociationRule(string AssociationRule_ID)
+        {
+
+        }
     }
 }

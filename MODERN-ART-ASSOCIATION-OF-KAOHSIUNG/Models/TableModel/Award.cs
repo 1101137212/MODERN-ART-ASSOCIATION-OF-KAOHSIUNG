@@ -3,6 +3,11 @@
     public class Award
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "Award"; } }
+        
+        /// <summary>
         /// 獎項詳細內容
         /// </summary>
         public string Award_Detail { get; set; }
@@ -21,5 +26,10 @@
         /// 獎項標題
         /// </summary>
         public string Award_Title { get; set; }
+
+        public void PK_Award(string Award_ID)
+        {
+
+        }
     }
 }

@@ -3,6 +3,11 @@
     public class Member
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "Member"; } }
+        
+        /// <summary>
         /// 會員帳號
         /// </summary>
         public string Member_Account { get; set; }
@@ -71,5 +76,10 @@
         /// 會員照片
         /// </summary>
         public string Member_Picture { get; set; }
+
+        public void PK_Member(string Member_ID)
+        {
+
+        }
     }
 }

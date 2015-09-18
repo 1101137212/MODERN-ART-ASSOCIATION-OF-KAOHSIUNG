@@ -3,6 +3,11 @@
     public class AssociationHistory
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "AssociationHistory"; } }
+        
+        /// <summary>
         /// 學會沿革詳細資料
         /// </summary>
         public string AssociationHistory_Detail { get; set; }
@@ -31,5 +36,10 @@
         /// 修改人編號
         /// </summary>
         public string AssociationHistory_Modifier { get; set; }
+
+        public void PK_AssociationHistory(string AssociationHistory_ID)
+        {
+
+        }
     }
 }

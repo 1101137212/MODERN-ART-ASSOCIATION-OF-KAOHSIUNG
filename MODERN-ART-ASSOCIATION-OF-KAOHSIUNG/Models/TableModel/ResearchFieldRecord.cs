@@ -3,6 +3,11 @@
     public class ResearchFieldRecord
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "Member"; } }
+        
+        /// <summary>
         /// 會員編號
         /// </summary>
         public string Member_ID { get; set; }
@@ -21,5 +26,10 @@
         /// 研究領域紀錄編號
         /// </summary>
         public string ResearchFieldRecord_ID { get; set; }
+
+        public void PK_ResearchFieldRecord(string ResearchFieldRecord_ID)
+        {
+
+        }
     }
 }

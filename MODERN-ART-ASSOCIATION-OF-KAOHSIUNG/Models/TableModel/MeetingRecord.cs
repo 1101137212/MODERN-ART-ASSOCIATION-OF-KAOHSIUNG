@@ -3,6 +3,11 @@
     public class MeetingRecord
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "MeetingRecord"; } }
+        
+        /// <summary>
         /// 會議記錄日期
         /// </summary>
         public string MeetingRecord_Date { get; set; }
@@ -46,5 +51,10 @@
         /// 會議紀錄標題
         /// </summary>
         public string MeetingRecord_Title { get; set; }
+
+        public void PK_MeetingRecord(string MeetingRecord_ID)
+        {
+
+        }
     }
 }

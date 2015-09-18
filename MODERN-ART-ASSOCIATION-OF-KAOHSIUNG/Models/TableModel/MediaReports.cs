@@ -3,6 +3,11 @@
     public class MediaReports
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "MediaReports"; } }
+        
+        /// <summary>
         /// 媒體報導日期
         /// </summary>
         public string MediaReports_Date { get; set; }
@@ -36,5 +41,10 @@
         /// 媒體報導標題
         /// </summary>
         public string MediaReports_Title { get; set; }
+
+        public void PK_MediaReports(string MediaReports_ID)
+        {
+
+        }
     }
 }

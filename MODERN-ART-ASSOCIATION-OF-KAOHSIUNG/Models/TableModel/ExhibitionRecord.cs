@@ -3,6 +3,11 @@
     public class ExhibitionRecord
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "ExhibitionRecord"; } }
+        
+        /// <summary>
         /// 展覽編號
         /// </summary>
         public string Exhibition_ID { get; set; }
@@ -21,5 +26,10 @@
         /// 會員編號
         /// </summary>
         public string Member_ID { get; set; }
+
+        public void PK_ExhibitionRecord(string ExhibitionRecord_ID)
+        {
+
+        }
     }
 }

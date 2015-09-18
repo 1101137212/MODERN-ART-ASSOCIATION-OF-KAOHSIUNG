@@ -3,6 +3,26 @@
     public class LatestNews
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "LatestNews"; } }
+
+        /// <summary>
+        /// 最新消息編號
+        /// </summary>
+        public string LatestNews_ID { get; set; }
+
+        /// <summary>
+        /// 最新消息標題
+        /// </summary>
+        public string LatestNews_Title { get; set; }
+
+        /// <summary>
+        /// 最新消息詳細資料
+        /// </summary>
+        public string LatestNews_Detail { get; set; }
+
+        /// <summary>
         /// 消息結束時間
         /// </summary>
         public string LatestNews_Enddatetime { get; set; }
@@ -81,5 +101,10 @@
         /// 最新消息分類
         /// </summary>
         public string LatestNews_State { get; set; }
+
+        public void PK_LatestNews(string LatestNews_ID)
+        {
+
+        }
     }
 }

@@ -3,6 +3,11 @@
     public class PositionRecord
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "PositionRecord"; } }
+        
+        /// <summary>
         /// 會議記錄編號
         /// </summary>
         public string MeetingRecord_ID { get; set; }
@@ -31,5 +36,10 @@
         /// 職位開始時間
         /// </summary>
         public string PositionRecord_Startdate { get; set; }
+
+        public void PK_PositionRecord(string PositionRecord_ID)
+        {
+
+        }
     }
 }

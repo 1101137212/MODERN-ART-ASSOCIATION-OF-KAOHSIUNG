@@ -3,6 +3,11 @@
     public class AssociationEvent
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "AssociationEvent"; } }
+        
+        /// <summary>
         /// 學會事蹟時間
         /// </summary>
         public string AssociationEvent_Date { get; set; }
@@ -36,5 +41,10 @@
         /// 學會事蹟標題
         /// </summary>
         public string AssociationEvent_Title { get; set; }
+
+        public void PK_AssociationEvent(string AssociationEvent_ID)
+        {
+
+        }
     }
 }

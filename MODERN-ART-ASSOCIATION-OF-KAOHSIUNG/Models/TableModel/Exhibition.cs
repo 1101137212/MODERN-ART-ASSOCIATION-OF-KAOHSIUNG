@@ -3,6 +3,11 @@
     public class Exhibition
     {
         /// <summary>
+        /// 資料表名稱
+        /// </summary>
+        public string TABLE_NAME { get { return "Exhibition"; } }
+        
+        /// <summary>
         /// 展覽詳細資料
         /// </summary>
         public string Exhibition_Detail { get; set; }
@@ -41,5 +46,10 @@
         /// 展覽標題
         /// </summary>
         public string Exhibition_Title { get; set; }
+
+        public void PK_Exhibition(string Exhibition_ID)
+        {
+
+        }
     }
 }
