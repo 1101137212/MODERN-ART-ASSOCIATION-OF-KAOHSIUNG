@@ -451,6 +451,12 @@
     <Content Include="Views\BCF\MeetingRecordIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controllers\AA\" />
+    <Folder Include="Controllers\AWS\" />
+    <Folder Include="Controllers\CF\" />
+    <Folder Include="Controllers\EX\" />
+    <Folder Include="Controllers\LN\" />
+    <Folder Include="Controllers\MEM\" />
     <Folder Include="Models\Backstage\CF\MeetingNews\" />
     <Folder Include="Models\Backstage\EX\ExhibitionNews\" />
     <Folder Include="Models\Backstage\LN\LatestNews\" />
