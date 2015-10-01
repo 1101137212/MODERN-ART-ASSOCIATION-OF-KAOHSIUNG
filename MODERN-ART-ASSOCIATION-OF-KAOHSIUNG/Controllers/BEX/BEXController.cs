@@ -10,8 +10,8 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BEX
 {
     public partial class BEXController : Controller
     {
-        private BExhibitionModel EX = new BExhibitionModel();
-        private BExhibitionRecordModel EXR = new BExhibitionRecordModel();
+        private BExhibitionModel BEXModel = new BExhibitionModel();
+        private BExhibitionRecordModel BEXRModel = new BExhibitionRecordModel();
         // GET: BEX
         public ActionResult ExhibitionIndex()
         {

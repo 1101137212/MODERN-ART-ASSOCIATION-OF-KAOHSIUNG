@@ -12,22 +12,22 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
     {
         public string GetAwarddata_B()
         {
-            return AW.GetAward_B();
+            return BAWModel.GetAward_B();
         }
 
         public void CreateAwarddata_B(Award Award)
         {
-            AW.CreateAward_B(Award);
+            BAWModel.CreateAward_B(Award);
         }
 
         public void DeleteAwarddata_B(int Award_ID)
         {
-            AW.DeleteAward_B(Award_ID);
+            BAWModel.DeleteAward_B(Award_ID);
         }
 
         public void UpdateAwarddata_B(Award Award)
         {
-            AW.UpdateAward_B(Award);
+            BAWModel.UpdateAward_B(Award);
         }
     }
 }

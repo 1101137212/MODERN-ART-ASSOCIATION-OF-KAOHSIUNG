@@ -12,22 +12,22 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
     {
         public string GetResearchFielddata_B()
         {
-            return RF.GetResearchField_B();
+            return BRFModel.GetResearchField_B();
         }
 
         public void CreateResearchFielddata_B(ResearchField ResearchField)
         {
-            RF.CreateResearchField_B(ResearchField);
+            BRFModel.CreateResearchField_B(ResearchField);
         }
 
         public void DeleteResearchFielddata_B(int ResearchField_ID)
         {
-            RF.DeleteResearchField_B(ResearchField_ID);
+            BRFModel.DeleteResearchField_B(ResearchField_ID);
         }
 
         public void UpdateResearchFielddata_B(ResearchField ResearchField)
         {
-            RF.UpdateResearchField_B(ResearchField);
+            BRFModel.UpdateResearchField_B(ResearchField);
         }
     }
 }

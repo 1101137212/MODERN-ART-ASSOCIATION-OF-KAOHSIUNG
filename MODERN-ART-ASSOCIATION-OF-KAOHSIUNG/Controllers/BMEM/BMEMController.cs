@@ -10,11 +10,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
 {
     public partial class BMEMController : Controller
     {
-        private BMemberModel MEM = new BMemberModel();
-        private BPositionModel P = new BPositionModel();
-        private BPositionRecordModel PR = new BPositionRecordModel();
-        private BResearchFieldModel RF = new BResearchFieldModel();
-        private BResearchFieldRecordModel RFR = new BResearchFieldRecordModel();
+        private BMemberModel BMEMModel = new BMemberModel();
+        private BPositionModel BPModel = new BPositionModel();
+        private BPositionRecordModel BPRModel = new BPositionRecordModel();
+        private BResearchFieldModel BRFModel = new BResearchFieldModel();
+        private BResearchFieldRecordModel BRFRModel = new BResearchFieldRecordModel();
         
         public ActionResult MemberIndex()
         {

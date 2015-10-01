@@ -6,16 +6,16 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 {
     public partial class BAWSController : Controller
     {
-        private BArtisticworksModel AWS = new BArtisticworksModel();
+        private BArtisticworksModel BAWSModel = new BArtisticworksModel();
 
         public void CreateArtisticworksdata_B(Artisticworks Artisticworks)
         {
-            AWS.CreateArtisticworks_B(Artisticworks);
+            BAWSModel.CreateArtisticworks_B(Artisticworks);
         }
 
         public void DeleteArtisticworksdata_B(int Artisticworks_ID)
         {
-            AWS.DeleteArtisticworks_B(Artisticworks_ID);
+            BAWSModel.DeleteArtisticworks_B(Artisticworks_ID);
         }
 
         // GET: Artisticworks
@@ -26,12 +26,12 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 
         public void UpdateArtisticworksdata_B(Artisticworks Artisticworks)
         {
-            AWS.UpdateArtisticworks_B(Artisticworks);
+            BAWSModel.UpdateArtisticworks_B(Artisticworks);
         }
 
         public string GetArtisticworksdata_B()
         {
-            return AWS.GetArtisticworks_B();
+            return BAWSModel.GetArtisticworks_B();
         }
     }
 }

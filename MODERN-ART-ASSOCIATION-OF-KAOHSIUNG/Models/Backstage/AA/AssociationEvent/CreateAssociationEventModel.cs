@@ -1,40 +1,31 @@
-﻿using System;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Text;
 using System.Web.Configuration;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationEventModel : SharedMethod
     {
-        public void CreateAssociationEvent_B(AssociationEvent AssociationEvent)
+        public void CreateAssociationEvent_B(AssociationEvent obj)
         {
-            string sql = "INSERT INTO AssociationEvent(AssociationEvent_Title,AssociationEvent_Detail,AssociationEvent_Date,AssociationEvent_Picture,AssociationEvent_Modifier,AssociationEvent_Modificationdatetime) VALUES(@AssociationEvent_Title,@AssociationEvent_Detail,@AssociationEvent_Date,@AssociationEvent_Picture,@AssociationEvent_Modifier,@AssociationEvent_Modificationdatetime)";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+
+            sql = SqlBuilder.Insert(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@AssociationEvent_Title", AssociationEvent.AssociationEvent_Title);
-                    cmd.Parameters.AddWithValue("@AssociationEvent_Detail", AssociationEvent.AssociationEvent_Detail);
-                    cmd.Parameters.AddWithValue("@AssociationEvent_Date", AssociationEvent.AssociationEvent_Date);
-                    cmd.Parameters.AddWithValue("@AssociationEvent_Picture", AssociationEvent.AssociationEvent_Picture);
-                    cmd.Parameters.AddWithValue("@AssociationEvent_Modifier", AssociationEvent.AssociationEvent_Modifier);
-                    cmd.Parameters.AddWithValue("@AssociationEvent_Modificationdatetime", AssociationEvent.AssociationEvent_Modificationdatetime);
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@AssociationEvent_Title", Value= obj.AssociationEvent_Title},
+                new SqlParameter() {ParameterName = "@AssociationEvent_Detail", Value = obj.AssociationEvent_Detail},
+                new SqlParameter() {ParameterName = "@AssociationEvent_Date", Value = obj.AssociationEvent_Date},
+                new SqlParameter() {ParameterName = "@AssociationEvent_Picture", Value = obj.AssociationEvent_Picture},
+                new SqlParameter() {ParameterName = "@AssociationEvent_Modifier", Value = obj.AssociationEvent_Modifier},
+                new SqlParameter() {ParameterName = "@AssociationEvent_Modificationdatetime", Value = obj.AssociationEvent_Modificationdatetime}
+            };
+
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }
