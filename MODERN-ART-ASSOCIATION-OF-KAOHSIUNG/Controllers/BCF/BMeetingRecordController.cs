@@ -15,19 +15,19 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
             return BMTRModel.GetMeetingRecord_B();
         }
 
-        public void CreateMeetingRecorddata_B(MeetingRecord MeetingRecord)
+        public void CreateMeetingRecorddata_B(MeetingRecord objPara)
         {
-            BMTRModel.CreateMeetingRecord_B(MeetingRecord);
+            BMTRModel.CreateMeetingRecord_B(objPara);
         }
 
-        public void DeleteMeetingRecorddata_B(int MeetingRecord_ID)
+        public void DeleteMeetingRecorddata_B(MeetingRecord objPara)
         {
-            BMTRModel.DeleteMeetingRecord_B(MeetingRecord_ID);
+            BMTRModel.DeleteMeetingRecord_B(objPara);
         }
 
-        public void UpdateMeetingRecorddata_B(MeetingRecord MeetingRecord)
+        public void UpdateMeetingRecorddata_B(MeetingRecord objPara)
         {
-            BMTRModel.UpdateMeetingRecord_B(MeetingRecord);
+            BMTRModel.UpdateMeetingRecord_B(objPara);
         }
     }
 }

@@ -2,34 +2,26 @@
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Text;
+using System.Collections.Generic;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationHistoryModel : SharedMethod
     {
-        public void DeleteAssociationHistory_B(int AssociationHistory_ID)
+        public void DeleteAssociationHistory_B(AssociationHistory obj)
         {
-            string sql = "DELETE FROM AssociationHistory WHERE AssociationHistory_ID=@AssociationHistory_ID";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+
+            sql = SqlBuilder.Delete(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@AssociationHistory_ID", AssociationHistory_ID);
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@AssociationHistory_ID", Value= obj.AssociationHistory_ID}
+            };
+
+            ConnectDBToSendData(sql, parameter);
+            
         }
     }
 }

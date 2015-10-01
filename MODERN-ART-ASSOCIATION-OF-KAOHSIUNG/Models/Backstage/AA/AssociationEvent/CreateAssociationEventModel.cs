@@ -12,7 +12,6 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
         public void CreateAssociationEvent_B(AssociationEvent obj)
         {
             StringBuilder sql = new StringBuilder();
-
             sql = SqlBuilder.Insert(obj);
 
             List<SqlParameter> parameter = new List<SqlParameter>()

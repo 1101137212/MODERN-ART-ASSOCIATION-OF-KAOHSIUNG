@@ -15,19 +15,19 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
             return BMDRModel.GetMediaReports_B();
         }
 
-        public void CreateMediaReportsdata_B(MediaReports MediaReports)
+        public void CreateMediaReportsdata_B(MediaReports objPara)
         {
-            BMDRModel.CreateMediaReports_B(MediaReports);
+            BMDRModel.CreateMediaReports_B(objPara);
         }
 
-        public void DeleteMediaReportsdata_B(int MediaReports_ID)
+        public void DeleteMediaReportsdata_B(MediaReports objPara)
         {
-            BMDRModel.DeleteMediaReports_B(MediaReports_ID);
+            BMDRModel.DeleteMediaReports_B(objPara);
         }
 
-        public void UpdateMediaReportsdata_B(MediaReports MediaReports)
+        public void UpdateMediaReportsdata_B(MediaReports objPara)
         {
-            BMDRModel.UpdateMediaReports_B(MediaReports);
+            BMDRModel.UpdateMediaReports_B(objPara);
         }
     }
 }

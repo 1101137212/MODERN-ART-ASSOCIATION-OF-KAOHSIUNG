@@ -8,25 +8,25 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
     {
         private BArtisticworksModel BAWSModel = new BArtisticworksModel();
 
-        public void CreateArtisticworksdata_B(Artisticworks Artisticworks)
-        {
-            BAWSModel.CreateArtisticworks_B(Artisticworks);
-        }
-
-        public void DeleteArtisticworksdata_B(int Artisticworks_ID)
-        {
-            BAWSModel.DeleteArtisticworks_B(Artisticworks_ID);
-        }
-
         // GET: Artisticworks
         public ActionResult ArtisticworksIndex()
         {
             return View();
         }
 
-        public void UpdateArtisticworksdata_B(Artisticworks Artisticworks)
+        public void CreateArtisticworksdata_B(Artisticworks objPara)
         {
-            BAWSModel.UpdateArtisticworks_B(Artisticworks);
+            BAWSModel.CreateArtisticworks_B(objPara);
+        }
+
+        public void DeleteArtisticworksdata_B(Artisticworks objPara)
+        {
+            BAWSModel.DeleteArtisticworks_B(objPara);
+        }             
+
+        public void UpdateArtisticworksdata_B(Artisticworks objPara)
+        {
+            BAWSModel.UpdateArtisticworks_B(objPara);
         }
 
         public string GetArtisticworksdata_B()

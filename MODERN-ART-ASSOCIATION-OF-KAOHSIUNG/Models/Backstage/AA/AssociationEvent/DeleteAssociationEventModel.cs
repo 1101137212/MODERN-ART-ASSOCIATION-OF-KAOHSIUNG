@@ -1,9 +1,9 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Web.Configuration;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
-using System.Text;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Text;
+using System.Web.Configuration;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
@@ -21,7 +21,6 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
             };
 
             ConnectDBToSendData(sql, parameter);
-
         }
     }
 }

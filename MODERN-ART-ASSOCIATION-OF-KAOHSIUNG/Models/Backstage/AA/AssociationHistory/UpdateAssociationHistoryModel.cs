@@ -2,39 +2,31 @@
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Text;
+using System.Collections.Generic;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationHistoryModel : SharedMethod
     {
-        public void UpdateAssociationHistory_B(AssociationHistory AssociationHistory)
+        public void UpdateAssociationHistory_B(AssociationHistory obj)
         {
-            string sql = "UPDATE AssociationHistory SET AssociationHistory_Detail=@AssociationHistory_Detail,AssociationHistory_Detail2=@AssociationHistory_Detail2,AssociationHistory_Detail3=@AssociationHistory_Detail3,AssociationHistory_Modifier=@AssociationHistory_Modifier,AssociationHistory_Modificationdatetime=@AssociationHistory_Modificationdatetime WHERE AssociationHistory_ID=@AssociationHistory_ID";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+
+            sql = SqlBuilder.Update(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Detail", AssociationHistory.AssociationHistory_Detail);
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Detail2", AssociationHistory.AssociationHistory_Detail2);
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Detail3", AssociationHistory.AssociationHistory_Detail3);
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Modifier", AssociationHistory.AssociationHistory_Modifier);
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Modificationdatetime", AssociationHistory.AssociationHistory_Modificationdatetime);
-                    cmd.Parameters.AddWithValue("@AssociationHistory_ID", AssociationHistory.AssociationHistory_ID);
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@AssociationHistory_Detail", Value= obj.AssociationHistory_Detail},
+                new SqlParameter() {ParameterName = "@AssociationHistory_Detail2", Value = obj.AssociationHistory_Detail2},
+                new SqlParameter() {ParameterName = "@AssociationHistory_Detail3", Value = obj.AssociationHistory_Detail3},
+                new SqlParameter() {ParameterName = "@AssociationHistory_Modifier", Value = obj.AssociationHistory_Modifier},
+                new SqlParameter() {ParameterName = "@AssociationHistory_Modificationdatetime", Value = obj.AssociationHistory_Modificationdatetime},
+                new SqlParameter() {ParameterName = "@AssociationHistory_ID", Value = obj.AssociationHistory_ID}
+            };
+
+            ConnectDBToSendData(sql, parameter);
+
         }
     }
 }

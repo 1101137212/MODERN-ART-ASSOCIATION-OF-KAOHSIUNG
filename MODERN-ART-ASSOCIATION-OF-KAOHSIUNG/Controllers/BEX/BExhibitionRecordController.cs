@@ -15,19 +15,19 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BEX
             return BEXRModel.GetExhibitionRecord_B();
         }
 
-        public void CreateExhibitionRecorddata_B(ExhibitionRecord ExhibitionRecord)
+        public void CreateExhibitionRecorddata_B(ExhibitionRecord objPara)
         {
-            BEXRModel.CreateExhibitionRecord_B(ExhibitionRecord);
+            BEXRModel.CreateExhibitionRecord_B(objPara);
         }
 
-        public void DeleteExhibitionRecorddata_B(int ExhibitionRecord_ID)
+        public void DeleteExhibitionRecorddata_B(ExhibitionRecord objPara)
         {
-            BEXRModel.DeleteExhibitionRecord_B(ExhibitionRecord_ID);
+            BEXRModel.DeleteExhibitionRecord_B(objPara);
         }
 
-        public void UpdateExhibitionRecorddata_B(ExhibitionRecord ExhibitionRecord)
+        public void UpdateExhibitionRecorddata_B(ExhibitionRecord objPara)
         {
-            BEXRModel.UpdateExhibitionRecord_B(ExhibitionRecord);
+            BEXRModel.UpdateExhibitionRecord_B(objPara);
         }
     }
 }

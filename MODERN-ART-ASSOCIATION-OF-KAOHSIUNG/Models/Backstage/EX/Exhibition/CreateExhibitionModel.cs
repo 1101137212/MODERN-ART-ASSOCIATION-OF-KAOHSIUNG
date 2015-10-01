@@ -2,41 +2,30 @@
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Text;
+using System.Collections.Generic;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BExhibitionModel : SharedMethod
     {
-        public void CreateExhibition_B(Exhibition Exhibition)
+        public void CreateExhibition_B(Exhibition obj)
         {
-            string sql = "INSERT INTO Exhibition(Exhibition_Title,Exhibition_Startdatetime,Exhibition_Enddatetime,Exhibition_Place,Exhibition_Detail,Exhibition_Picture,Exhibition_Otherpeople) VALUES(@Exhibition_Title,@Exhibition_Startdatetime,@Exhibition_Enddatetime,@Exhibition_Place,@Exhibition_Detail,@Exhibition_Picture,@Exhibition_Otherpeople)";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+            sql = SqlBuilder.Insert(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Exhibition_Detail", Exhibition.Exhibition_Detail);
-                    cmd.Parameters.AddWithValue("@Exhibition_Enddatetime", Exhibition.Exhibition_Enddatetime);
-                    cmd.Parameters.AddWithValue("@Exhibition_Otherpeople", Exhibition.Exhibition_Otherpeople);
-                    cmd.Parameters.AddWithValue("@Exhibition_Picture", Exhibition.Exhibition_Picture);
-                    cmd.Parameters.AddWithValue("@Exhibition_Place", Exhibition.Exhibition_Place);
-                    cmd.Parameters.AddWithValue("@Exhibition_Startdatetime", Exhibition.Exhibition_Startdatetime);
-                    cmd.Parameters.AddWithValue("@Exhibition_Title", Exhibition.Exhibition_Title);
-                    
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@Exhibition_Detail", Value= obj.Exhibition_Detail},
+                new SqlParameter() {ParameterName = "@Exhibition_Enddatetime", Value = obj.Exhibition_Enddatetime},
+                new SqlParameter() {ParameterName = "@Exhibition_Otherpeople", Value = obj.Exhibition_Otherpeople},
+                new SqlParameter() {ParameterName = "@Exhibition_Picture", Value = obj.Exhibition_Picture},
+                new SqlParameter() {ParameterName = "@Exhibition_Place", Value = obj.Exhibition_Place},
+                new SqlParameter() {ParameterName = "@Exhibition_Startdatetime", Value = obj.Exhibition_Startdatetime},
+                new SqlParameter() {ParameterName = "@Exhibition_Title", Value = obj.Exhibition_Title}
+            };
+
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }

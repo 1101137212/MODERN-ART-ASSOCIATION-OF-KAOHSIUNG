@@ -15,19 +15,19 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
             return BARModel.GetAssociationRule_B();
         }
 
-        public void CreateAssociationRuledata_B(AssociationRule AssociationRule)
+        public void CreateAssociationRuledata_B(AssociationRule objPara)
         {
-            BARModel.CreateAssociationRule_B(AssociationRule);
+            BARModel.CreateAssociationRule_B(objPara);
         }
 
-        public void DeleteAssociationRuledata_B(int AssociationRule_ID)
+        public void DeleteAssociationRuledata_B(AssociationRule objPara)
         {
-            BARModel.DeleteAssociationRule_B(AssociationRule_ID);
+            BARModel.DeleteAssociationRule_B(objPara);
         }
 
-        public void UpdateAssociationRuledata_B(AssociationRule AssociationRule)
+        public void UpdateAssociationRuledata_B(AssociationRule objPara)
         {
-            BARModel.UpdateAssociationRule_B(AssociationRule);
+            BARModel.UpdateAssociationRule_B(objPara);
         }
     }
 }

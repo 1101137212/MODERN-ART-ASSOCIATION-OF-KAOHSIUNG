@@ -2,38 +2,28 @@
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Collections.Generic;
+using System.Text;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAwardModel : SharedMethod
     {
-        public void UpdateAward_B(Award Award)
+        public void UpdateAward_B(Award obj)
         {
-            string sql = "UPDATE Award SET Award_Title=@Award_Title,Award_Detail=@Award_Detail,Award_Picture=@Award_Picture WHERE Award_ID=@Award_ID";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+
+            sql = SqlBuilder.Update(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Award_Detail", Award.Award_Detail);
-                    cmd.Parameters.AddWithValue("@Award_ID", Award.Award_ID);
-                    cmd.Parameters.AddWithValue("@Award_Picture", Award.Award_Picture);
-                    cmd.Parameters.AddWithValue("@Award_Title", Award.Award_Title);
-                    
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@Award_Detail", Value= obj.Award_Detail},
+                new SqlParameter() {ParameterName = "@Award_ID", Value = obj.Award_ID},
+                new SqlParameter() {ParameterName = "@Award_Picture", Value = obj.Award_Picture},
+                new SqlParameter() {ParameterName = "@Award_Title", Value = obj.Award_Title}
+            };
+
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }
