@@ -17,11 +17,12 @@
 	color: white;
 	text-align: right;
 }
-.cell{
-	border: 2pt solid rgb(208,209,209);
-	background-image: url('../img/cell.png');
-	 padding-top: 30px; padding-bottom: 30px; 
-	font-size: 14pt;
+.cell {
+    border: 2pt solid rgb(208,209,209);
+    background-image: url('../../Image/cell.png');
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 14pt;
 }
 .cell .title{
 	font-size: 20pt;
