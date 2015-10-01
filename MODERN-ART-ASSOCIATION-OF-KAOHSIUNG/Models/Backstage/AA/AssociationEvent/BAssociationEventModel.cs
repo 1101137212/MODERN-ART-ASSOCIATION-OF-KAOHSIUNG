@@ -1,7 +1,8 @@
-﻿using System;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System;
 using System.Data.SqlClient;
+using System.Text;
 using System.Web.Configuration;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
@@ -9,7 +10,20 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
     {
         public string GetAssociationEvent_B()
         {
-            string sql = "SELECT AssociationEvent_ID,AssociationEvent_Title,AssociationEvent_Detail,AssociationEvent_Date,AssociationEvent_Picture,Member_Name,AssociationEvent_Modificationdatetime FROM AssociationEvent LEFT JOIN Member ON AssociationEvent.AssociationEvent_Modifier=Member.Member_ID";
+            StringBuilder sql = new StringBuilder();
+            
+            sql.AppendLine("SELECT ");
+            sql.AppendLine("	AssociationEvent_ID, ");
+            sql.AppendLine("	AssociationEvent_Title, ");
+            sql.AppendLine("	AssociationEvent_Detail, ");
+            sql.AppendLine("	AssociationEvent_Date, ");
+            sql.AppendLine("	AssociationEvent_Picture, ");
+            sql.AppendLine("	Member_Name, ");
+            sql.AppendLine("	AssociationEvent_Modificationdatetime ");
+            sql.AppendLine("FROM AssociationEvent ");
+            sql.AppendLine("LEFT JOIN Member ");
+            sql.AppendLine("	ON AssociationEvent.AssociationEvent_Modifier = Member.Member_ID ");
+            
             return ConnectDBToGetData(sql);
         }
     }

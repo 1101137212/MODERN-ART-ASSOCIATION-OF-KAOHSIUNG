@@ -2,37 +2,26 @@
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Text;
+using System.Collections.Generic;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAwardRecordModel : SharedMethod
     {
-        public void CreateAwardRecord_B(AwardRecord AwardRecord)
+        public void CreateAwardRecord_B(AwardRecord obj)
         {
-            string sql = "INSERT INTO AwardRecord (AwardRecord_Date,Award_ID,Member_ID) VALUES(@AwardRecord_Date,@Award_ID,@Member_ID)";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+            sql = SqlBuilder.Insert(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@AwardRecord_Date", AwardRecord.AwardRecord_Date);
-                    cmd.Parameters.AddWithValue("@Award_ID", AwardRecord.Award_ID);
-                    cmd.Parameters.AddWithValue("@Member_ID", AwardRecord.Member_ID);
-                    
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@AwardRecord_Date", Value= obj.AwardRecord_Date},
+                new SqlParameter() {ParameterName = "@Award_ID", Value = obj.Award_ID},
+                new SqlParameter() {ParameterName = "@Member_ID", Value = obj.Member_ID}
+            };
+
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }

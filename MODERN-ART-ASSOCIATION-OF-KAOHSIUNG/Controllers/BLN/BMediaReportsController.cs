@@ -12,22 +12,22 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
     {
         public string GetMediaReportsdata_B()
         {
-            return MDR.GetMediaReports_B();
+            return BMDRModel.GetMediaReports_B();
         }
 
-        public void CreateMediaReportsdata_B(MediaReports MediaReports)
+        public void CreateMediaReportsdata_B(MediaReports objPara)
         {
-            MDR.CreateMediaReports_B(MediaReports);
+            BMDRModel.CreateMediaReports_B(objPara);
         }
 
-        public void DeleteMediaReportsdata_B(int MediaReports_ID)
+        public void DeleteMediaReportsdata_B(MediaReports objPara)
         {
-            MDR.DeleteMediaReports_B(MediaReports_ID);
+            BMDRModel.DeleteMediaReports_B(objPara);
         }
 
-        public void UpdateMediaReportsdata_B(MediaReports MediaReports)
+        public void UpdateMediaReportsdata_B(MediaReports objPara)
         {
-            MDR.UpdateMediaReports_B(MediaReports);
+            BMDRModel.UpdateMediaReports_B(objPara);
         }
     }
 }

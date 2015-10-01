@@ -1,35 +1,26 @@
-﻿using System;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Text;
 using System.Web.Configuration;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationEventModel : SharedMethod
     {
-        public void DeleteAssociationEvent_B(int AssociationEvent_ID)
+        public void DeleteAssociationEvent_B(AssociationEvent obj)
         {
-            string sql = "DELETE FROM AssociationEvent WHERE AssociationEvent_ID=@AssociationEvent_ID";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+
+            sql = SqlBuilder.Delete(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@AssociationEvent_ID", AssociationEvent_ID);
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@AssociationEvent_ID", Value= obj.AssociationEvent_ID}
+            };
+
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }

@@ -1,39 +1,28 @@
-﻿using System;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Text;
 using System.Web.Configuration;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationRuleModel : SharedMethod
     {
-        public void CreateAssociationRule_B(AssociationRule AssociationRule)
+        public void CreateAssociationRule_B(AssociationRule obj)
         {
-            string sql = "INSERT INTO AssociationRule(AssociationRule_Title,AssociationRule_Detail,AssociationRule_Modifier,AssociationRule_Modificationdatetime) VALUES(@AssociationRule_Title,@AssociationRule_Detail,@AssociationRule_Modifier,@AssociationRule_Modificationdatetime)";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+            sql = SqlBuilder.Insert(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@AssociationRule_Detail", AssociationRule.AssociationRule_Detail);
-                    cmd.Parameters.AddWithValue("@AssociationRule_Modificationdatetime", AssociationRule.AssociationRule_Modificationdatetime);
-                    cmd.Parameters.AddWithValue("@AssociationRule_Modifier", AssociationRule.AssociationRule_Modifier);
-                    cmd.Parameters.AddWithValue("@AssociationRule_Title", AssociationRule.AssociationRule_Title);
-                    
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@AssociationRule_Detail", Value= obj.AssociationRule_Detail},
+                new SqlParameter() {ParameterName = "@AssociationRule_Modificationdatetime", Value = obj.AssociationRule_Modificationdatetime},
+                new SqlParameter() {ParameterName = "@AssociationRule_Modifier", Value = obj.AssociationRule_Modifier},
+                new SqlParameter() {ParameterName = "@AssociationRule_Title", Value = obj.AssociationRule_Title}
+            };
+
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }

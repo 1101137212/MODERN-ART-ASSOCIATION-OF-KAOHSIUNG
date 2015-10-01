@@ -2,40 +2,29 @@
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Text;
+using System.Collections.Generic;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BMediaReportsModel : SharedMethod
     {
-        public void CreateMediaReports_B(MediaReports MediaReports)
+        public void CreateMediaReports_B(MediaReports obj)
         {
-            string sql = "INSERT INTO MediaReports(MediaReports_Title,MediaReports_Date,MediaReports_Detail,MediaReports_Picture,MediaReports_Modifier,MediaReports_Modificationdatetime) VALUES(@MediaReports_Title,@MediaReports_Date,@MediaReports_Detail,@MediaReports_Picture,@MediaReports_Modifier,@MediaReports_Modificationdatetime)";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+            sql = SqlBuilder.Insert(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@MediaReports_Date", MediaReports.MediaReports_Date);
-                    cmd.Parameters.AddWithValue("@MediaReports_Detail", MediaReports.MediaReports_Detail);
-                    cmd.Parameters.AddWithValue("@MediaReports_Modificationdatetime", MediaReports.MediaReports_Modificationdatetime);
-                    cmd.Parameters.AddWithValue("@MediaReports_Modifier", MediaReports.MediaReports_Modifier);
-                    cmd.Parameters.AddWithValue("@MediaReports_Picture", MediaReports.MediaReports_Picture);
-                    cmd.Parameters.AddWithValue("@MediaReports_Title", MediaReports.MediaReports_Title);
-                    
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@MediaReports_Date", Value= obj.MediaReports_Date},
+                new SqlParameter() {ParameterName = "@MediaReports_Detail", Value = obj.MediaReports_Detail},
+                new SqlParameter() {ParameterName = "@MediaReports_Modificationdatetime", Value = obj.MediaReports_Modificationdatetime},
+                new SqlParameter() {ParameterName = "@MediaReports_Modifier", Value = obj.MediaReports_Modifier},
+                new SqlParameter() {ParameterName = "@MediaReports_Picture", Value = obj.MediaReports_Picture},
+                new SqlParameter() {ParameterName = "@MediaReports_Title", Value = obj.MediaReports_Title}
+            };
+
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }

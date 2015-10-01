@@ -12,22 +12,22 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
     {
         public string GetPositiondata_B()
         {
-            return P.GetPosition_B();
+            return BPModel.GetPosition_B();
         }
 
         public void CreatePositiondata_B(Position Position)
         {
-            P.CreatePosition_B(Position);
+            BPModel.CreatePosition_B(Position);
         }
 
         public void DeletePositiondata_B(int Position_ID)
         {
-            P.DeletePosition_B(Position_ID);
+            BPModel.DeletePosition_B(Position_ID);
         }
 
         public void UpdatePositiondata_B(Position Position)
         {
-            P.UpdatePosition_B(Position);
+            BPModel.UpdatePosition_B(Position);
         }
     }
 }

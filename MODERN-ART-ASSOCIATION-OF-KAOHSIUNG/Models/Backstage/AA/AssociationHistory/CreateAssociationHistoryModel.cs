@@ -1,40 +1,29 @@
-﻿using System;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Text;
 using System.Web.Configuration;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationHistoryModel : SharedMethod
     {
-        public void CreateAssociationHistory_B(AssociationHistory AssociationHistory)
+        public void CreateAssociationHistory_B(AssociationHistory obj)
         {
-            string sql = "INSERT INTO AssociationHistory(AssociationHistory_Detail,AssociationHistory_Detail2,AssociationHistory_Detail3,AssociationHistory_Modifier,AssociationHistory_Modificationdatetime) VALUES(@AssociationHistory_Detail,@AssociationHistory_Detail2,@AssociationHistory_Detail3,@AssociationHistory_Modifier,@AssociationHistory_Modificationdatetime)";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Detail", AssociationHistory.AssociationHistory_Detail);
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Detail2", AssociationHistory.AssociationHistory_Detail2);
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Detail3", AssociationHistory.AssociationHistory_Detail3);
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Modifier", AssociationHistory.AssociationHistory_Modifier);
-                    cmd.Parameters.AddWithValue("@AssociationHistory_Modificationdatetime", AssociationHistory.AssociationHistory_Modificationdatetime);
+            StringBuilder sql = new StringBuilder();
+            sql = SqlBuilder.Insert(obj);
 
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+            List<SqlParameter> parameter = new List<SqlParameter>()
+            {
+                new SqlParameter() {ParameterName = "@AssociationHistory_Detail", Value= obj.AssociationHistory_Detail},
+                new SqlParameter() {ParameterName = "@AssociationHistory_Detail2", Value = obj.AssociationHistory_Detail2},
+                new SqlParameter() {ParameterName = "@AssociationHistory_Detail3", Value = obj.AssociationHistory_Detail3},
+                new SqlParameter() {ParameterName = "@AssociationHistory_Modifier", Value = obj.AssociationHistory_Modifier},
+                new SqlParameter() {ParameterName = "@AssociationHistory_Modificationdatetime", Value = obj.AssociationHistory_Modificationdatetime}
+            };
+
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }

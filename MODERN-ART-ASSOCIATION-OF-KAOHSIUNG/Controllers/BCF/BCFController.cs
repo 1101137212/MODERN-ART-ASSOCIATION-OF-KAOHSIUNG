@@ -10,8 +10,8 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
 {
     public partial class BCFController : Controller
     {
-        private BAssociationRuleModel AR = new BAssociationRuleModel();
-        private BMeetingRecordModel MTR = new BMeetingRecordModel();
+        private BAssociationRuleModel BARModel = new BAssociationRuleModel();
+        private BMeetingRecordModel BMTRModel = new BMeetingRecordModel();
         // GET: BCF
         public ActionResult AssociationRuleIndex()
         {

@@ -12,19 +12,19 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BAA
     {
         public string GetAssociationHistorydata_B()
         {
-            return AH.GetAssociationHistory_B();
+            return BAHModel.GetAssociationHistory_B();
         }
-        public void CreateAssociationHistorydata_B(AssociationHistory AssociationHistory)
+        public void CreateAssociationHistorydata_B(AssociationHistory objPara)
         {
-            AH.CreateAssociationHistory_B(AssociationHistory);
+            BAHModel.CreateAssociationHistory_B(objPara);
         }
-        public void UpdateAssociationHistorydata_B(AssociationHistory AssociationHistory)
+        public void UpdateAssociationHistorydata_B(AssociationHistory objPara)
         {
-            AH.UpdateAssociationHistory_B(AssociationHistory);
+            BAHModel.UpdateAssociationHistory_B(objPara);
         }
-        public void DeleteAssociationHistorydata_B(int AssociationHistory_ID)
+        public void DeleteAssociationHistorydata_B(AssociationHistory objPara)
         {
-            AH.DeleteAssociationHistory_B(AssociationHistory_ID);
+            BAHModel.DeleteAssociationHistory_B(objPara);
         }
     }
 }

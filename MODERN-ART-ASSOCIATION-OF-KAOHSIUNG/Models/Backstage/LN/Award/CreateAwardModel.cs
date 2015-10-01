@@ -2,37 +2,27 @@
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Text;
+using System.Collections.Generic;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAwardModel : SharedMethod
     {
-        public void CreateAward_B(Award Award)
+        public void CreateAward_B(Award obj)
         {
-            string sql = "INSERT INTO Award (Award_Title,Award_Detail,Award_Picture) VALUES(@Award_Title,@Award_Detail,@Award_Picture)";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+            sql = SqlBuilder.Insert(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Award_Detail", Award.Award_Detail);
-                    cmd.Parameters.AddWithValue("@Award_Picture", Award.Award_Picture);
-                    cmd.Parameters.AddWithValue("@Award_Title", Award.Award_Title);
-                    
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@Award_Detail", Value= obj.Award_Detail},
+                new SqlParameter() {ParameterName = "@Award_Picture", Value = obj.Award_Picture},
+                new SqlParameter() {ParameterName = "@Award_Title", Value = obj.Award_Title}
+            };
+
+            ConnectDBToSendData(sql, parameter);
+                   
         }
     }
 }

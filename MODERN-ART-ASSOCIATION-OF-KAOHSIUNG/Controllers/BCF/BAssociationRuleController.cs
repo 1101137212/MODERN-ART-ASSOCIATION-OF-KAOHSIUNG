@@ -12,22 +12,22 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
     {
         public string GetAssociationRuledata_B()
         {
-            return AR.GetAssociationRule_B();
+            return BARModel.GetAssociationRule_B();
         }
 
-        public void CreateAssociationRuledata_B(AssociationRule AssociationRule)
+        public void CreateAssociationRuledata_B(AssociationRule objPara)
         {
-            AR.CreateAssociationRule_B(AssociationRule);
+            BARModel.CreateAssociationRule_B(objPara);
         }
 
-        public void DeleteAssociationRuledata_B(int AssociationRule_ID)
+        public void DeleteAssociationRuledata_B(AssociationRule objPara)
         {
-            AR.DeleteAssociationRule_B(AssociationRule_ID);
+            BARModel.DeleteAssociationRule_B(objPara);
         }
 
-        public void UpdateAssociationRuledata_B(AssociationRule AssociationRule)
+        public void UpdateAssociationRuledata_B(AssociationRule objPara)
         {
-            AR.UpdateAssociationRule_B(AssociationRule);
+            BARModel.UpdateAssociationRule_B(objPara);
         }
     }
 }

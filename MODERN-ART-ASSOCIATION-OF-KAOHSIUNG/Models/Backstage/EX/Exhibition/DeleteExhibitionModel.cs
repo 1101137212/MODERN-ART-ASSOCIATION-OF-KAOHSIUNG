@@ -2,35 +2,25 @@
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Text;
+using System.Collections.Generic;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BExhibitionModel : SharedMethod
     {
-        public void DeleteExhibition_B(int Exhibition_ID)
+        public void DeleteExhibition_B(Exhibition obj)
         {
-            string sql = "DELETE FROM Exhibition WHERE Exhibition_ID=@Exhibition_ID";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+
+            sql = SqlBuilder.Delete(obj);
+
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Exhibition_ID", Exhibition_ID);
-                    
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@Exhibition_ID", Value= obj.Exhibition_ID}
+            };
+
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }
