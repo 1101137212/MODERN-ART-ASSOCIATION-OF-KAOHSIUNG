@@ -10,16 +10,36 @@
             console.log("無法取得db");
         }
     });
+    //$.ajax({
+    //    url: '/BAA/CreateAssociationEventdata_B',
+    //    type: 'POST',
+    //    data: {
+    //        AssociationEvent_Title: 'test888884545',
+    //        AssociationEvent_Detail: 'test88885458',
+    //        AssociationEvent_Date: '2015/08/28',
+    //        AssociationEvent_Picture: 'test88545',
+    //        AssociationEvent_Modifier: 5,
+    //        AssociationEvent_Modificationdatetime:'2015/08/28'
+    //    },
+    //    dataType: 'json',
+    //    success: function (data) {
+    //        console.log("test");
+    //    },
+    //    error: function () {
+    //        console.log("無法取得db");
+    //    }
+    //});
     $.ajax({
-        url: '/BAA/CreateAssociationEventdata_B',
+        url: '/BAA/UpdateAssociationEventdata_B',
         type: 'POST',
         data: {
-            AssociationEvent_Title: 'test888884545',
-            AssociationEvent_Detail: 'test88885458',
-            AssociationEvent_Date: '2015/08/28',
-            AssociationEvent_Picture: 'test88545',
-            AssociationEvent_Modifier: 5,
-            AssociationEvent_Modificationdatetime:'2015/08/28'
+            AssociationEvent_Title: 'test123',
+            AssociationEvent_Detail: 'test234',
+            AssociationEvent_Date: '2015/08/27',
+            AssociationEvent_Picture: 'test',
+            AssociationEvent_Modifier: 4,
+            AssociationEvent_Modificationdatetime:'2015/08/27',
+            AssociationEvent_ID: 21
         },
         dataType: 'json',
         success: function (data) {
@@ -30,30 +50,10 @@
         }
     });
     //$.ajax({
-    //    url: '/BAA/UpdateAssociationEventdata_B',
-    //    type: 'POST',
-    //    data: {
-    //        AssociationEvent_Title: 'test123',
-    //        AssociationEvent_Detail: 'test234',
-    //        AssociationEvent_Date: '2015/08/27',
-    //        AssociationEvent_Picture: 'test',
-    //        AssociationEvent_Modifier: 4,
-    //        AssociationEvent_Modificationdatetime:'2015/08/27',
-    //        AssociationEvent_ID: 11
-    //    },
-    //    dataType: 'json',
-    //    success: function (data) {
-    //        console.log("test");
-    //    },
-    //    error: function () {
-    //        console.log("無法取得db");
-    //    }
-    //});
-    //$.ajax({
     //    url: '/BAA/DeleteAssociationEventdata_B',
     //    type: 'POST',
     //    data: {
-    //        AssociationEvent_ID: 12
+    //        AssociationEvent_ID: 22
     //    },
     //    dataType: 'json',
     //    success: function (data) {

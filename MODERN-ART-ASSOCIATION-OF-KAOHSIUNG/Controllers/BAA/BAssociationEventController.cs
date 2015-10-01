@@ -14,17 +14,17 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BAA
         {
             return BAEModel.GetAssociationEvent_B();
         }
-        public void CreateAssociationEventdata_B(AssociationEvent AssociationEvent)
+        public void CreateAssociationEventdata_B(AssociationEvent objPara)
         {
-            BAEModel.CreateAssociationEvent_B(AssociationEvent);
+            BAEModel.CreateAssociationEvent_B(objPara);
         }
-        public void DeleteAssociationEventdata_B(int AssociationEvent_ID)
+        public void DeleteAssociationEventdata_B(AssociationEvent objPara)
         {
-            BAEModel.DeleteAssociationEvent_B(AssociationEvent_ID);
+            BAEModel.DeleteAssociationEvent_B(objPara);
         }
-        public void UpdateAssociationEventdata_B(AssociationEvent AssociationEvent)
+        public void UpdateAssociationEventdata_B(AssociationEvent objPara)
         {
-            BAEModel.UpdateAssociationEvent_B(AssociationEvent);
+            BAEModel.UpdateAssociationEvent_B(objPara);
         }
     }
 }

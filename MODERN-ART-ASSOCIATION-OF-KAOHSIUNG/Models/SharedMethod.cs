@@ -240,7 +240,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
                     }
                     else
                     {
-                        if (objItem.GetValue(obj, null) != null && objItem.Name != "TABLE_NAME")
+                        if (objItem.GetValue(obj, null) != null && objItem.Name != "TABLE_NAME" && !objSharedMethod.ChkIsPrimaryKey(liPrimaryKey, objItem.Name))
                         {
                             if (index == 0)
                             {
@@ -349,5 +349,29 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
             }
         } 
         #endregion
+
+        /// <summary>
+        /// 檢核是否為PrimaryKey
+        /// </summary>
+        /// <param name="liPrimaryKey">PrimaryKey資料集</param>
+        /// <param name="strPropertyName">PropertyName</param>
+        /// <returns></returns>
+        /// <history>
+        /// 2015/10/01 George Liu Create
+        /// </history>
+        private bool ChkIsPrimaryKey(List<string> liPrimaryKey, string strPropertyName)
+        {
+            bool blResult = false;
+
+            foreach (string strPrimaryKey in liPrimaryKey)
+            {
+                if (strPrimaryKey == strPropertyName)
+                {
+                    blResult = true;
+                }
+            }
+
+            return blResult;
+        }
     }
 }
