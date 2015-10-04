@@ -341,12 +341,12 @@
     <Content Include="Content\nav.css" />
     <Content Include="Content\LN\news.css" />
     <Content Include="Content\LN\prize.css" />
-    <Content Include="Content\workcollection.css" />
+    <Content Include="Content\AWS\workcollection.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\Dictionary\Site.css" />
     <Content Include="Scripts\Backstage\AWS\Artisticworks.js" />
     <Content Include="Scripts\Backstage\AA\AssociationEvent.js" />
     <Content Include="Scripts\Backstage\AA\AssociationHistory.js" />
@@ -365,12 +365,12 @@
     <Content Include="Scripts\Dictionary\bootstrap.min.js" />
     <Content Include="Content\Dictionary\bootstrap-theme.css.map" />
     <Content Include="Content\Dictionary\bootstrap.css.map" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\Dictionary\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Dictionary\jquery-1.10.2.js" />
     <Content Include="Scripts\Dictionary\jquery-1.10.2.min.js" />
@@ -388,7 +388,6 @@
     <Content Include="Scripts\Dictionary\npm.js" />
     <Content Include="Scripts\Dictionary\respond.js" />
     <Content Include="Scripts\Dictionary\respond.min.js" />
-    <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\Dictionary\_references.js" />
     <Content Include="Image\Artist\0-1.jpg" />
     <Content Include="Image\Artist\0.jpg" />
@@ -448,6 +447,15 @@
     <Content Include="Image\Shared\slogo.png" />
     <Content Include="Image\Shared\sprites.png" />
     <Content Include="Image\works\w1.png" />
+    <Content Include="Views\備分\artistsindex.html" />
+    <Content Include="Views\備分\events.html" />
+    <Content Include="Views\備分\exhibition.html" />
+    <Content Include="Views\備分\index.html" />
+    <Content Include="Views\備分\member.html" />
+    <Content Include="Views\備分\news.html" />
+    <Content Include="Views\備分\prize.html" />
+    <Content Include="Views\備分\rule.html" />
+    <Content Include="Views\備分\WorkCollection.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -513,7 +521,6 @@
     <Content Include="Views\MEM\MemberDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\AWS\" />
     <Folder Include="Content\Backstage\" />
     <Folder Include="Content\CF\" />
     <Folder Include="Content\MEM\" />
@@ -527,9 +534,9 @@
     <Folder Include="Models\DefinedModel\Backstage\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>

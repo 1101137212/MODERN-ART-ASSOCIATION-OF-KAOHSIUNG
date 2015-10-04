@@ -25,7 +25,9 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/Dictionary/bootstrap.css",
-                      "~/Content/Dictionary/site.css"));
+                      "~/Content/Dictionary/site.css",
+                      "~/Content/main.css",
+                      "~/Content/Dictionary/font-awesome.css"));
         }
     }
 }
