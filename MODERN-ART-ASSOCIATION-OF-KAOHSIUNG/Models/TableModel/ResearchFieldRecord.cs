@@ -5,7 +5,7 @@
         /// <summary>
         /// 資料表名稱
         /// </summary>
-        public string TABLE_NAME { get { return "Member"; } }
+        public string TABLE_NAME { get { return "ResearchFieldRecord"; } }
         
         /// <summary>
         /// 會員編號

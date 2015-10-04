@@ -1,37 +1,22 @@
-﻿using System;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Web.Configuration;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using System.Text;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BResearchFieldModel : SharedMethod
     {
-        public void UpdateResearchField_B(ResearchField ResearchField)
+        public void UpdateResearchField_B(ResearchField obj)
         {
-            string sql = "UPDATE ResearchField SET ResearchField_Name=@ResearchField_Name WHERE ResearchField_ID=@ResearchField_ID";
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            StringBuilder sql = new StringBuilder();
+            sql = SqlBuilder.Update(obj);
+            List<SqlParameter> parameter = new List<SqlParameter>()
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@ResearchField_ID", ResearchField.ResearchField_ID);
-                    cmd.Parameters.AddWithValue("@ResearchField_Name", ResearchField.ResearchField_Name);
-                    
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("error");
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
-                }
-            }
+                new SqlParameter() {ParameterName = "@ResearchField_Name",Value = obj.ResearchField_Name},
+                new SqlParameter() {ParameterName = "@ResearchField_ID",Value = obj.ResearchField_ID}
+            };
+            ConnectDBToSendData(sql, parameter);
         }
     }
 }

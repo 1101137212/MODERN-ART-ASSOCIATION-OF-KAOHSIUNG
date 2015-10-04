@@ -15,19 +15,19 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
             return BRFRModel.GetResearchFieldRecord_B();
         }
 
-        public void CreateResearchFieldRecorddata_B(ResearchFieldRecord ResearchFieldRecord)
+        public void CreateResearchFieldRecorddata_B(ResearchFieldRecord objPara)
         {
-            BRFRModel.CreateResearchFieldRecord_B(ResearchFieldRecord);
+            BRFRModel.CreateResearchFieldRecord_B(objPara);
         }
 
-        public void DeleteResearchFieldRecorddata_B(int ResearchFieldRecord_ID)
+        public void DeleteResearchFieldRecorddata_B(ResearchFieldRecord objPara)
         {
-            BRFRModel.DeleteResearchFieldRecord_B(ResearchFieldRecord_ID);
+            BRFRModel.DeleteResearchFieldRecord_B(objPara);
         }
 
-        public void UpdateResearchFieldRecorddata_B(ResearchFieldRecord ResearchFieldRecord)
+        public void UpdateResearchFieldRecorddata_B(ResearchFieldRecord objPara)
         {
-            BRFRModel.UpdateResearchFieldRecord_B(ResearchFieldRecord);
+            BRFRModel.UpdateResearchFieldRecord_B(objPara);
         }
     }
 }
