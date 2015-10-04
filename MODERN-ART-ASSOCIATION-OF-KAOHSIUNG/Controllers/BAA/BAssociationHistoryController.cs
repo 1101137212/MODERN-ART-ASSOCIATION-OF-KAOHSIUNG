@@ -10,7 +10,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BAA
 {
     public partial class BAAController : Controller
     {
-        public string GetAssociationHistorydata_B()
+        public IList<AssociationHistory> GetAssociationHistorydata_B()
         {
             return BAHModel.GetAssociationHistory_B();
         }

@@ -166,6 +166,7 @@
     <Compile Include="Controllers\BAA\BAAController.cs" />
     <Compile Include="Controllers\BAA\BAssociationEventController.cs" />
     <Compile Include="Controllers\BAA\BAssociationHistoryController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BAWS\BAWSController.cs" />
     <Compile Include="Controllers\BCF\BAssociationRuleController.cs" />
     <Compile Include="Controllers\BCF\BCFController.cs" />
@@ -252,6 +253,7 @@
     <Compile Include="Models\Backstage\MEM\ResearchField\CreateResearchFieldModel.cs" />
     <Compile Include="Models\Backstage\MEM\ResearchField\DeleteResearchFieldModel.cs" />
     <Compile Include="Models\Backstage\MEM\ResearchField\UpdateResearchFieldModel.cs" />
+    <Compile Include="Models\DefinedModel\GetAssociationEvent_B.cs" />
     <Compile Include="Models\TableModel\Artisticworks.cs" />
     <Compile Include="Models\Backstage\AWS\BArtisticworksModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -480,7 +482,7 @@
     <Folder Include="Models\Backstage\CF\MeetingNews\" />
     <Folder Include="Models\Backstage\EX\ExhibitionNews\" />
     <Folder Include="Models\Backstage\LN\LatestNews\" />
-    <Folder Include="Models\DefinedModel\" />
+    <Folder Include="Models\DefinedModel\Backstage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

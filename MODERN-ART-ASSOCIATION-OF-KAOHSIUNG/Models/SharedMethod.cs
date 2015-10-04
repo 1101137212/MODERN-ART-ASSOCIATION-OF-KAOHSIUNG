@@ -16,7 +16,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
         /// </summary>
         /// <param name="sql">sql</param>            
         /// <returns></returns>
-        public static string ConnectDBToGetData(StringBuilder sql)
+        public DataTable ConnectDBToGetData(StringBuilder sql)
         {
             DataTable dt = new DataTable(); //Server=(LocalDB)\v11.0;DataBase=MAAK;Trusted_Connection=True;
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
@@ -24,9 +24,8 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
                 using (SqlCommand cmd = new SqlCommand(sql.ToString(), conn))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.Fill(dt);
-
-                    return ConvertToJson(DataTableToList(dt));
+                    da.Fill(dt);                    
+                    return dt;
                 }
             }
         }
@@ -61,25 +60,38 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
             }
         }
 
-        public static string ConvertToJson(List<Dictionary<string, object>> dataList)
+        public static List<T> DataTableToList<T>(DataTable dataTableList) where T : new()
         {
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            return serializer.Serialize(dataList);
-        }
-
-        public static List<Dictionary<string, object>> DataTableToList(DataTable dataTableList)
-        {
-            List<Dictionary<string, object>> listReturn = new List<Dictionary<string, object>>();
-            foreach (DataRow row in dataTableList.Rows)
+            try
             {
-                Dictionary<string, object> dataRow = new Dictionary<string, object>();
-                foreach (DataColumn col in dataTableList.Columns)
+                List<T> list = new List<T>();
+
+                foreach (var row in dataTableList.AsEnumerable())
                 {
-                    dataRow.Add(col.ColumnName, row[col]);
+                    T obj = new T();
+
+                    foreach (var prop in obj.GetType().GetProperties())
+                    {
+                        try
+                        {
+                            PropertyInfo propertyInfo = obj.GetType().GetProperty(prop.Name);
+                            propertyInfo.SetValue(obj, Convert.ChangeType(row[prop.Name], propertyInfo.PropertyType), null);
+                        }
+                        catch
+                        {
+                            continue;
+                        }
+                    }
+
+                    list.Add(obj);
                 }
-                listReturn.Add(dataRow);
+                return list;
             }
-            return listReturn;
+            catch
+            {
+                return null;
+            }
+
         }
 
         #region SqlBuilder
@@ -347,7 +359,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
 
                 return strSql;
             }
-        } 
+        }
         #endregion
 
         /// <summary>

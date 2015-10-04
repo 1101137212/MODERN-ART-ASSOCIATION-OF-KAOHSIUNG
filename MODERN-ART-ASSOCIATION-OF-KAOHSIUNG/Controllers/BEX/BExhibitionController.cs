@@ -10,7 +10,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BEX
 {
     public partial class BEXController : Controller
     {
-        public string GetExhibitiondata_B()
+        public IList<Exhibition> GetExhibitiondata_B()
         {
             return BEXModel.GetExhibition_B();
         }

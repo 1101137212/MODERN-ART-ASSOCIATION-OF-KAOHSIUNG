@@ -10,7 +10,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
 {
     public partial class BLNController : Controller
     {
-        public string GetAwarddata_B()
+        public IList<Award> GetAwarddata_B()
         {
             return BAWModel.GetAward_B();
         }

@@ -10,7 +10,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
 {
     public partial class BCFController : Controller
     {
-        public string GetMeetingRecorddata_B()
+        public IList<MeetingRecord> GetMeetingRecorddata_B()
         {
             return BMTRModel.GetMeetingRecord_B();
         }

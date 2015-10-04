@@ -12,6 +12,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BAA
     {
         private BAssociationHistoryModel BAHModel = new BAssociationHistoryModel();
         private BAssociationEventModel BAEModel = new BAssociationEventModel();
+        private BaseController Base = new BaseController();
         // GET: BAA
         public ActionResult AssociationHistoryIndex()
         {

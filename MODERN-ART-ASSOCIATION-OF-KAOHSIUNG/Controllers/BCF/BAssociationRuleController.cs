@@ -10,7 +10,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
 {
     public partial class BCFController : Controller
     {
-        public string GetAssociationRuledata_B()
+        public IList<AssociationRule> GetAssociationRuledata_B()
         {
             return BARModel.GetAssociationRule_B();
         }

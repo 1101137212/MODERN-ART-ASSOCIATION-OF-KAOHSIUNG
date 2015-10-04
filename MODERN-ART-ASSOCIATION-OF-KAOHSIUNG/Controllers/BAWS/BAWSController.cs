@@ -1,6 +1,7 @@
 ﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage;
 using System.Web.Mvc;
+using System.Collections.Generic;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 {
@@ -29,7 +30,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
             BAWSModel.UpdateArtisticworks_B(objPara);
         }
 
-        public string GetArtisticworksdata_B()
+        public IList<Artisticworks> GetArtisticworksdata_B()
         {
             return BAWSModel.GetArtisticworks_B();
         }
