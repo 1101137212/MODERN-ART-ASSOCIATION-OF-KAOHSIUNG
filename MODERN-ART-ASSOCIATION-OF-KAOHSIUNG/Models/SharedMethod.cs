@@ -12,7 +12,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
     public class SharedMethod
     {
         /// <summary>
-        /// ConnectDBToGetData 連線DB並取得資料
+        /// ConnectDBToGetData 連線DB並取得資料(無參數)
         /// </summary>
         /// <param name="sql">sql</param>            
         /// <returns></returns>
@@ -30,14 +30,33 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
             }
         }
 
+        /// <summary>
+        /// ConnectDBToGetData 連線DB並取得資料(有參數)
+        /// </summary>
+        /// <param name="sql">sql</param>            
+        /// <returns></returns>
+        public DataTable ConnectDBToGetData(StringBuilder sql, List<SqlParameter> parameter)
+        {
+            DataTable dt = new DataTable(); //Server=(LocalDB)\v11.0;DataBase=MAAK;Trusted_Connection=True;
+            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(sql.ToString(), conn))
+                {
+                    cmd.Parameters.AddRange(parameter.ToArray());
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+        /// <summary>
+        /// ConnectDBToGetData 連線DB並取得資料
+        /// </summary>
+        /// <param name="sql">sql</param>            
+        /// <returns></returns>
         public static void ConnectDBToSendData(StringBuilder sql, List<SqlParameter> parameter)
         {
-            /// <summary>
-            /// ConnectDBToGetData 連線DB並取得資料
-            /// </summary>
-            /// <param name="sql">sql</param>            
-            /// <returns></returns>
-            /// 
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["MAAKDB"].ConnectionString))
             {
                 conn.Open();
