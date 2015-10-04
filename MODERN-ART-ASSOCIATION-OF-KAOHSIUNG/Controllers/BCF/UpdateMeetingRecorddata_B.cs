@@ -11,9 +11,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
     {
         #region Public Methods
 
-        public void UpdateMeetingRecorddata_B(MeetingRecord objPara)
+        public object UpdateMeetingRecorddata_B(MeetingRecord objPara)
         {
             BMTRModel.UpdateMeetingRecord_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods

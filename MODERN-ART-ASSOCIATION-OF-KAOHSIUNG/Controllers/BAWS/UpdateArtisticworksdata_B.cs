@@ -8,9 +8,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
     {
         #region Public Methods
 
-        public void UpdateArtisticworksdata_B(Artisticworks objPara)
+        public object UpdateArtisticworksdata_B(Artisticworks objPara)
         {
             BAWSModel.UpdateArtisticworks_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods

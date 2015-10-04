@@ -11,9 +11,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BAA
     {
         #region Public Methods
 
-        public void UpdateAssociationHistorydata_B(AssociationHistory objPara)
+        public object UpdateAssociationHistorydata_B(AssociationHistory objPara)
         {
             BAHModel.UpdateAssociationHistory_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods

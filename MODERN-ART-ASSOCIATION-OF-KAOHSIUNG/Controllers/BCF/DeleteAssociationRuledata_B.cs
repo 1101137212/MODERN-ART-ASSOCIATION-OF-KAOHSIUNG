@@ -11,9 +11,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
     {
         #region Public Methods
 
-        public void DeleteAssociationRuledata_B(AssociationRule objPara)
+        public object DeleteAssociationRuledata_B(AssociationRule objPara)
         {
             BARModel.DeleteAssociationRule_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods
