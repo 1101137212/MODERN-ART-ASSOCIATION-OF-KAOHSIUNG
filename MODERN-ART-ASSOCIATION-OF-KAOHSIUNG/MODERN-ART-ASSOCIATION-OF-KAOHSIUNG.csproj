@@ -342,9 +342,6 @@
     <Content Include="Scripts\Dictionary\respond.min.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\Dictionary\_references.js" />
-    <Content Include="Views\artistsindex.html" />
-    <Content Include="Views\events.html" />
-    <Content Include="Views\exhibition.html" />
     <Content Include="Image\Artist\0-1.jpg" />
     <Content Include="Image\Artist\0.jpg" />
     <Content Include="Image\Artist\1-1.jpg" />
@@ -403,12 +400,6 @@
     <Content Include="Image\slogo.png" />
     <Content Include="Image\sprites.png" />
     <Content Include="Image\works\w1.png" />
-    <Content Include="Views\index.html" />
-    <Content Include="Views\member.html" />
-    <Content Include="Views\news.html" />
-    <Content Include="Views\prize.html" />
-    <Content Include="Views\rule.html" />
-    <Content Include="Views\WorkCollection.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

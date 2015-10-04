@@ -15,7 +15,7 @@
     //    type: 'POST',
     //    data: {
     //        Member_Name: 'test',
-    //        Member_Mobile: '0900000000',
+    //        Member_Mobile: '0900000011',
     //        Member_Addresszip: 'test',
     //        Member_Address: 'test',
     //        Member_Picture: 'test',
@@ -41,7 +41,7 @@
     //    type: 'POST',
     //    data: {
     //        Member_Name: 'test11',
-    //        Member_Mobile: '0900000011',
+    //        Member_Mobile: '0900000111',
     //        Member_Addresszip: 'test1',
     //        Member_Address: 'test1',
     //        Member_Picture: 'test1',
@@ -53,7 +53,7 @@
     //        Member_Experience: 'test1',
     //        Member_Adminname: 'test1',
     //        Member_Adminpasswd: 'test1',
-    //        Member_ID: 19
+    //        Member_ID: 25
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -67,7 +67,7 @@
     //    url: '/BMEM/DeleteMemberdata_B',
     //    type: 'POST',
     //    data: {
-    //        Member_ID: 19
+    //        Member_ID: 25
     //    },
     //    dataType: 'json',
     //    success: function (data) {

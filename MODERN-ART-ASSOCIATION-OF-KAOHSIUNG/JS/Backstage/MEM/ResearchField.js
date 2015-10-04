@@ -29,7 +29,7 @@
     //    type: 'POST',
     //    data: {
     //        ResearchField_Name: 'test111',
-    //        ResearchField_ID: 31
+    //        ResearchField_ID: 32
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -43,7 +43,7 @@
     //    url: '/BMEM/DeleteResearchFielddata_B',
     //    type: 'POST',
     //    data: {
-    //        ResearchField_ID: 31
+    //        ResearchField_ID: 32
     //    },
     //    dataType: 'json',
     //    success: function (data) {

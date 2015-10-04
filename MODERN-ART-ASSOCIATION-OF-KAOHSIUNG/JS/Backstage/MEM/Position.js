@@ -31,7 +31,7 @@
     //    data: {
     //        Position_Name: 'test11',
     //        Position_Competence: '2',
-    //        Position_ID: 15
+    //        Position_ID: 17
     //    },
     //    dataType: 'json',
     //    success: function (data) {
@@ -45,7 +45,7 @@
     //    url: '/BMEM/DeletePositiondata_B',
     //    type: 'POST',
     //    data: {
-    //        Position_ID: 16
+    //        Position_ID: 17
     //    },
     //    dataType: 'json',
     //    success: function (data) {

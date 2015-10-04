@@ -12,22 +12,22 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
     {
         public string GetMemberdata_B()
         {
-            return BMEMModel.GetMember();
+            return BMEMModel.GetMember_B();
         }
 
-        public void CreateMemberdata_B(Member Member)
+        public void CreateMemberdata_B(Member objPara)
         {
-            BMEMModel.CreateMember_B(Member);
+            BMEMModel.CreateMember_B(objPara);
         }
 
-        public void DeleteMemberdata_B(int Member_ID)
+        public void DeleteMemberdata_B(Member objPara)
         {
-            BMEMModel.DeleteMember_B(Member_ID);
+            BMEMModel.DeleteMember_B(objPara);
         }
 
-        public void UpdateMemberdata_B(Member Member)
+        public void UpdateMemberdata_B(Member objPara)
         {
-            BMEMModel.UpdateMember_B(Member);
+            BMEMModel.UpdateMember_B(objPara);
         }
     }
 }

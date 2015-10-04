@@ -15,19 +15,19 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
             return BPModel.GetPosition_B();
         }
 
-        public void CreatePositiondata_B(Position Position)
+        public void CreatePositiondata_B(Position objPara)
         {
-            BPModel.CreatePosition_B(Position);
+            BPModel.CreatePosition_B(objPara);
         }
 
-        public void DeletePositiondata_B(int Position_ID)
+        public void DeletePositiondata_B(Position objPara)
         {
-            BPModel.DeletePosition_B(Position_ID);
+            BPModel.DeletePosition_B(objPara);
         }
 
-        public void UpdatePositiondata_B(Position Position)
+        public void UpdatePositiondata_B(Position objPara)
         {
-            BPModel.UpdatePosition_B(Position);
+            BPModel.UpdatePosition_B(objPara);
         }
     }
 }
