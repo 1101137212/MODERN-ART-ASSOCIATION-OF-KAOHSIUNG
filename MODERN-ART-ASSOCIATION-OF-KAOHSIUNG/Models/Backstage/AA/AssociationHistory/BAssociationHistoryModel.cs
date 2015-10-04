@@ -14,8 +14,6 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
             sql.AppendLine("SELECT ");
             sql.AppendLine("	AssociationHistory_ID, ");
             sql.AppendLine("	AssociationHistory_Detail, ");
-            sql.AppendLine("	AssociationHistory_Detail2, ");
-            sql.AppendLine("	AssociationHistory_Detail3, ");
             sql.AppendLine("	Member_Name, ");
             sql.AppendLine("	AssociationHistory_Modificationdatetime ");
             sql.AppendLine("FROM AssociationHistory ");

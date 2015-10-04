@@ -13,16 +13,6 @@
         public string AssociationHistory_Detail { get; set; }
 
         /// <summary>
-        /// 學會沿革詳細資料2
-        /// </summary>
-        public string AssociationHistory_Detail2 { get; set; }
-
-        /// <summary>
-        /// 學會沿革詳細資料3
-        /// </summary>
-        public string AssociationHistory_Detail3 { get; set; }
-
-        /// <summary>
         /// 學會沿革編號
         /// </summary>
         public string AssociationHistory_ID { get; set; }
