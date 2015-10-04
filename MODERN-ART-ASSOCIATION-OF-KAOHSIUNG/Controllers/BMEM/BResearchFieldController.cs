@@ -10,7 +10,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
 {
     public partial class BMEMController : Controller
     {
-        public string GetResearchFielddata_B()
+        public IList<ResearchField> GetResearchFielddata_B()
         {
             return BRFModel.GetResearchField_B();
         }

@@ -1,5 +1,9 @@
 ﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
+using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.DefinedModel;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using System.Web.Configuration;
@@ -8,7 +12,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAssociationEventModel : SharedMethod
     {
-        public string GetAssociationEvent_B()
+        public IList<GetAssociationEvent_B> GetAssociationEvent_B()
         {
             StringBuilder sql = new StringBuilder();
             
@@ -24,7 +28,9 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
             sql.AppendLine("LEFT JOIN Member ");
             sql.AppendLine("	ON AssociationEvent.AssociationEvent_Modifier = Member.Member_ID ");
             
-            return ConnectDBToGetData(sql);
+            DataTable table = ConnectDBToGetData(sql);
+           
+            return DataTableToList<GetAssociationEvent_B>(table);
         }
     }
 }

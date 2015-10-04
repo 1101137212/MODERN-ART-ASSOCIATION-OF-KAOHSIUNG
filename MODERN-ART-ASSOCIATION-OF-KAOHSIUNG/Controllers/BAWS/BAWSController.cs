@@ -1,37 +1,36 @@
-﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
-using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage;
+﻿using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
 {
     public partial class BAWSController : Controller
     {
-        private BArtisticworksModel BAWSModel = new BArtisticworksModel();
+        /// <summary>
+        /// 後台-作品集(BAWS)
+        /// </summary>
+        /// <returns></returns>
+        /// <history>
+        /// 2015/10/04  Turtle    Create
+        /// </history>
+        ///
 
-        // GET: Artisticworks
+        #region Properties
+
+        private BArtisticworksModel BAWSModel = new BArtisticworksModel();
+        private BaseController Base = new BaseController();
+
+        #endregion Properties
+
+        #region Public Methods
+
+        // 建立作品集(BAWS)View
+
         public ActionResult ArtisticworksIndex()
         {
             return View();
         }
 
-        public void CreateArtisticworksdata_B(Artisticworks objPara)
-        {
-            BAWSModel.CreateArtisticworks_B(objPara);
-        }
-
-        public void DeleteArtisticworksdata_B(Artisticworks objPara)
-        {
-            BAWSModel.DeleteArtisticworks_B(objPara);
-        }             
-
-        public void UpdateArtisticworksdata_B(Artisticworks objPara)
-        {
-            BAWSModel.UpdateArtisticworks_B(objPara);
-        }
-
-        public string GetArtisticworksdata_B()
-        {
-            return BAWSModel.GetArtisticworks_B();
-        }
+        #endregion Public Methods
     }
 }

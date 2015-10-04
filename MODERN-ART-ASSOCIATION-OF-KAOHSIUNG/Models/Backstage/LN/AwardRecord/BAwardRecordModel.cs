@@ -3,12 +3,14 @@ using System.Data.SqlClient;
 using System.Web.Configuration;
 using MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.TableModel;
 using System.Text;
+using System.Data;
+using System.Collections.Generic;
 
 namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
 {
     public partial class BAwardRecordModel : SharedMethod
     {
-        public string GetAwardRecord_B()
+        public IList<AwardRecord> GetAwardRecord_B()
         {
             StringBuilder sql = new StringBuilder();
             sql.AppendLine("SELECT ");
@@ -22,7 +24,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models.Backstage
             sql.AppendLine("JOIN Award ");
             sql.AppendLine("	ON Award.Award_ID = AwardRecord.Award_ID ");
 
-            return ConnectDBToGetData(sql);
+            DataTable table = ConnectDBToGetData(sql);
+
+            IList<AwardRecord> objData = DataTableToList<AwardRecord>(table);
+            return objData;
         }
     }
 }

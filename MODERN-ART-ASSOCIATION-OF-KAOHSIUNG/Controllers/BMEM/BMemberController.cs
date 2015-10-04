@@ -10,7 +10,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
 {
     public partial class BMEMController : Controller
     {
-        public string GetMemberdata_B()
+        public IList<Member> GetMemberdata_B()
         {
             return BMEMModel.GetMember_B();
         }

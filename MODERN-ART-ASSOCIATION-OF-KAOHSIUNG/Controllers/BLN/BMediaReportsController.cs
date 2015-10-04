@@ -10,7 +10,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
 {
     public partial class BLNController : Controller
     {
-        public string GetMediaReportsdata_B()
+        public IList<MediaReports> GetMediaReportsdata_B()
         {
             return BMDRModel.GetMediaReports_B();
         }

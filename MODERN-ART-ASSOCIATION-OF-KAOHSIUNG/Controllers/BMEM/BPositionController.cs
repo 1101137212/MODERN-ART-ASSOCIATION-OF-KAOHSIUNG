@@ -10,7 +10,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
 {
     public partial class BMEMController : Controller
     {
-        public string GetPositiondata_B()
+        public IList<Position> GetPositiondata_B()
         {
             return BPModel.GetPosition_B();
         }
