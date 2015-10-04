@@ -11,9 +11,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
     {
         #region Public Methods
 
-        public IList<MediaReports> GetMediaReportsdata_B()
+        public string GetMediaReportsdata_B()
         {
-            return BMDRModel.GetMediaReports_B();
+            IList<MediaReports> objData = BMDRModel.GetMediaReports_B();
+            return Base.ConvertToJson<MediaReports>(objData);
         }
 
         #endregion Public Methods

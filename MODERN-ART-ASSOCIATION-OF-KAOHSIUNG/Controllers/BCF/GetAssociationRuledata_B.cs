@@ -11,9 +11,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
     {
         #region Public Methods
 
-        public IList<AssociationRule> GetAssociationRuledata_B()
+        public string GetAssociationRuledata_B()
         {
-            return BARModel.GetAssociationRule_B();
+            IList<AssociationRule> objData = BARModel.GetAssociationRule_B();
+            return Base.ConvertToJson<AssociationRule>(objData);
         }
 
         #endregion Public Methods

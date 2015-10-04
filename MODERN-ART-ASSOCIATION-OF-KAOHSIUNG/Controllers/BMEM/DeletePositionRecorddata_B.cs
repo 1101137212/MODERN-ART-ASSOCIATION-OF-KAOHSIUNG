@@ -11,7 +11,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
     {
         #region Public Methods
 
-        public void DeletePositionRecorddata_B(PositionRecord objPara)
+        public object DeletePositionRecorddata_B(PositionRecord objPara)
         {
             BPRModel.DeletePositionRecord_B(objPara);
             object objData = true;

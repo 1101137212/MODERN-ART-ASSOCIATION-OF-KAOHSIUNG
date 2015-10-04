@@ -11,9 +11,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BAA
     {
         #region Public Methods
 
-        public IList<AssociationHistory> GetAssociationHistorydata_B()
+        public string GetAssociationHistorydata_B()
         {
-            return BAHModel.GetAssociationHistory_B();
+            IList<AssociationHistory> objData = BAHModel.GetAssociationHistory_B();
+            return Base.ConvertToJson<AssociationHistory>(objData);
         }
 
         #endregion Public Methods

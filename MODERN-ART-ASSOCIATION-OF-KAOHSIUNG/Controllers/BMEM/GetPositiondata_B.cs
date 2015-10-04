@@ -11,9 +11,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
     {
         #region Public Methods
 
-        public IList<Position> GetPositiondata_B()
+        public string GetPositiondata_B()
         {
-            return BPModel.GetPosition_B();
+            IList<Position> objData = BPModel.GetPosition_B();
+            return Base.ConvertToJson<Position>(objData);
         }
 
         #endregion Public Methods

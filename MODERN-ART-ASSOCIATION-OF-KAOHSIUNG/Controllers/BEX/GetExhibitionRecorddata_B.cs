@@ -11,9 +11,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BEX
     {
         #region Public Methods
 
-        public IList<ExhibitionRecord> GetExhibitionRecorddata_B()
+        public string GetExhibitionRecorddata_B()
         {
-            return BEXRModel.GetExhibitionRecord_B();
+            IList<ExhibitionRecord> objData = BEXRModel.GetExhibitionRecord_B();
+            return Base.ConvertToJson<ExhibitionRecord>(objData);
         }
 
         #endregion Public Methods

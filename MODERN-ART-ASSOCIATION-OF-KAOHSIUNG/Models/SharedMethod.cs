@@ -34,6 +34,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
         /// ConnectDBToGetData 連線DB並取得資料(有參數)
         /// </summary>
         /// <param name="sql">sql</param>            
+        /// <param name="parameter">parameter</param>            
         /// <returns></returns>
         public DataTable ConnectDBToGetData(StringBuilder sql, List<SqlParameter> parameter)
         {
@@ -54,6 +55,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
         /// ConnectDBToGetData 連線DB並取得資料
         /// </summary>
         /// <param name="sql">sql</param>            
+        /// <param name="parameter">parameter</param>            
         /// <returns></returns>
         public static void ConnectDBToSendData(StringBuilder sql, List<SqlParameter> parameter)
         {
@@ -79,6 +81,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Models
             }
         }
 
+        /// <summary>
+        /// DataTableToList DataTable轉換成List
+        /// </summary>
+        /// <param name="DataTable">DataTable</param>            
+        /// <returns>List</returns>
         public static List<T> DataTableToList<T>(DataTable dataTableList) where T : new()
         {
             try
