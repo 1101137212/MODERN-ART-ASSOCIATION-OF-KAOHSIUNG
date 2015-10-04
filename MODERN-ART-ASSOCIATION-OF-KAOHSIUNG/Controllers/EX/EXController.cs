@@ -9,7 +9,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.EX
     public class EXController : Controller
     {
         // GET: EX
-        public ActionResult Exhibition()
+        public ActionResult Exhibitionold()
         {
             return View();
         }

@@ -161,6 +161,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AA\AAController.cs" />
+    <Compile Include="Controllers\AA\GetAssociationEventdataController.cs" />
+    <Compile Include="Controllers\AA\GetAssociationHistorydataController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AWS\AWSController.cs" />
     <Compile Include="Controllers\BAA\BAAController.cs" />
@@ -240,6 +242,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AA\GetAssociationEventListDataModel.cs" />
+    <Compile Include="Models\AA\GetAssociationHistoryListDataModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Backstage\AA\AssociationEvent\GetAssociationEvent_B.cs" />
     <Compile Include="Models\Backstage\AA\AssociationEvent\CreateAssociationEvent_B.cs" />
@@ -299,7 +303,7 @@
     <Compile Include="Models\Backstage\MEM\ResearchField\CreateResearchField_B.cs" />
     <Compile Include="Models\Backstage\MEM\ResearchField\DeleteResearchField_B.cs" />
     <Compile Include="Models\Backstage\MEM\ResearchField\UpdateResearchField_B.cs" />
-    <Compile Include="Models\DefinedModel\GetAssociationEvent_B.cs" />
+    <Compile Include="Models\DefinedModel\Backstage\AA\GetAssociationEvent_B.cs" />
     <Compile Include="Models\TableModel\Artisticworks.cs" />
     <Compile Include="Models\Backstage\AWS\GetArtisticworks_B.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -531,7 +535,6 @@
     <Folder Include="Models\Backstage\CF\MeetingNews\" />
     <Folder Include="Models\Backstage\EX\ExhibitionNews\" />
     <Folder Include="Models\Backstage\LN\LatestNews\" />
-    <Folder Include="Models\DefinedModel\Backstage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
