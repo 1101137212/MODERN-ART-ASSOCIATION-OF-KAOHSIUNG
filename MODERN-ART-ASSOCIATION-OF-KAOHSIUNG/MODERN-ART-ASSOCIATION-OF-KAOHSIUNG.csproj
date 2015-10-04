@@ -508,7 +508,7 @@
     <Content Include="Views\LN\Award.cshtml" />
     <Content Include="Views\LN\MediaReports.cshtml" />
     <Content Include="Views\LN\LatestActivityNews.cshtml" />
-    <Content Include="Views\EX\Exhibition.cshtml" />
+    <Content Include="Views\EX\Exhibitionold.cshtml" />
     <Content Include="Views\EX\ExhibitionNews.cshtml" />
     <Content Include="Views\AWS\Artisticworks.cshtml" />
     <Content Include="Views\CF\AssociationRule.cshtml" />
