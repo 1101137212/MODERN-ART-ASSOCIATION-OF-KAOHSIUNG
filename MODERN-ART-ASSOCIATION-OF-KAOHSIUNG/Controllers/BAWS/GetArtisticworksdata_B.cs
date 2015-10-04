@@ -8,9 +8,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers
     {
         #region Public Methods
 
-        public IList<Artisticworks> GetArtisticworksdata_B()
+        public string GetArtisticworksdata_B()
         {
-            return BAWSModel.GetArtisticworks_B();
+            IList<Artisticworks> objData = BAWSModel.GetArtisticworks_B();
+            return Base.ConvertToJson<Artisticworks>(objData);
         }
 
         #endregion Public Methods

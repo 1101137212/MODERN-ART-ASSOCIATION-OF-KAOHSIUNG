@@ -11,7 +11,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
     {
         #region Public Methods
 
-        public void CreateAwardRecorddata_B(AwardRecord objPara)
+        public object CreateAwardRecorddata_B(AwardRecord objPara)
         {
             BAWRModel.CreateAwardRecord_B(objPara);
             object objData = true;

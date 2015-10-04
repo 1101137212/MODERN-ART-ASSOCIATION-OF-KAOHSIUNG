@@ -11,9 +11,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
     {
         #region Public Methods
 
-        public IList<MeetingRecord> GetMeetingRecorddata_B()
+        public string GetMeetingRecorddata_B()
         {
-            return BMTRModel.GetMeetingRecord_B();
+            IList<MeetingRecord> objData = BMTRModel.GetMeetingRecord_B();
+            return Base.ConvertToJson<MeetingRecord>(objData);
         }
 
         #endregion Public Methods

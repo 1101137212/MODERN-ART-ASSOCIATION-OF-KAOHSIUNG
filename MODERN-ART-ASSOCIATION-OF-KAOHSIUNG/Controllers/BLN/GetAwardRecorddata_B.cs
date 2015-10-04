@@ -11,9 +11,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
     {
         #region Public Methods
 
-        public IList<AwardRecord> GetAwardRecorddata_B()
+        public string GetAwardRecorddata_B()
         {
-            return BAWRModel.GetAwardRecord_B();
+            IList<AwardRecord> objData = BAWRModel.GetAwardRecord_B();
+            return Base.ConvertToJson<AwardRecord>(objData);
         }
 
         #endregion Public Methods

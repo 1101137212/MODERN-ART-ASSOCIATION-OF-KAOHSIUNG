@@ -11,7 +11,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
     {
         #region Public Methods
 
-        public void DeleteAwarddata_B(Award objPara)
+        public object DeleteAwarddata_B(Award objPara)
         {
             BAWModel.DeleteAward_B(objPara);
             object objData = true;

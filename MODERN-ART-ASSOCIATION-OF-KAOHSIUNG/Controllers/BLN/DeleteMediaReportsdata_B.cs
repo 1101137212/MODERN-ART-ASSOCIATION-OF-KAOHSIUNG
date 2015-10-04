@@ -11,7 +11,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
     {
         #region Public Methods
 
-        public void DeleteMediaReportsdata_B(MediaReports objPara)
+        public object DeleteMediaReportsdata_B(MediaReports objPara)
         {
             BMDRModel.DeleteMediaReports_B(objPara);
             object objData = true;

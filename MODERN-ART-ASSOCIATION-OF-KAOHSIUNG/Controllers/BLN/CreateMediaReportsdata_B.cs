@@ -11,7 +11,7 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
     {
         #region Public Methods
 
-        public void CreateMediaReportsdata_B(MediaReports objPara)
+        public object CreateMediaReportsdata_B(MediaReports objPara)
         {
             BMDRModel.CreateMediaReports_B(objPara);
             object objData = true;

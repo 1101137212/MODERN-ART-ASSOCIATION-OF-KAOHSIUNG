@@ -11,9 +11,10 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BMEM
     {
         #region Public Methods
 
-        public IList<ResearchField> GetResearchFielddata_B()
+        public string GetResearchFielddata_B()
         {
-            return BRFModel.GetResearchField_B();
+            IList<ResearchField> objData = BRFModel.GetResearchField_B();
+            return Base.ConvertToJson<ResearchField>(objData);
         }
 
         #endregion Public Methods
