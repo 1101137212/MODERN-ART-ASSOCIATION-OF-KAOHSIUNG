@@ -161,6 +161,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AA\AAController.cs" />
+    <Compile Include="Controllers\AA\GetAssociationEventdataController.cs" />
+    <Compile Include="Controllers\AA\GetAssociationHistorydataController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AWS\AWSController.cs" />
     <Compile Include="Controllers\BAA\BAAController.cs" />
@@ -216,6 +218,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AA\GetAssociationEventListDataModel.cs" />
+    <Compile Include="Models\AA\GetAssociationHistoryListDataModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Backstage\AA\AssociationEvent\BAssociationEventModel.cs" />
     <Compile Include="Models\Backstage\AA\AssociationEvent\CreateAssociationEventModel.cs" />
@@ -275,7 +279,7 @@
     <Compile Include="Models\Backstage\MEM\ResearchField\CreateResearchFieldModel.cs" />
     <Compile Include="Models\Backstage\MEM\ResearchField\DeleteResearchFieldModel.cs" />
     <Compile Include="Models\Backstage\MEM\ResearchField\UpdateResearchFieldModel.cs" />
-    <Compile Include="Models\DefinedModel\GetAssociationEvent_B.cs" />
+    <Compile Include="Models\DefinedModel\Backstage\AA\GetAssociationEvent_B.cs" />
     <Compile Include="Models\TableModel\Artisticworks.cs" />
     <Compile Include="Models\Backstage\AWS\BArtisticworksModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -323,6 +327,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\AA\AssociationEvent.js" />
+    <Content Include="Scripts\AA\AssociationHistory.js" />
     <Content Include="Scripts\Backstage\AWS\Artisticworks.js" />
     <Content Include="Scripts\Backstage\AA\AssociationEvent.js" />
     <Content Include="Scripts\Backstage\AA\AssociationHistory.js" />
@@ -497,10 +503,32 @@
     <Folder Include="Image\Backstage\" />
     <Folder Include="Image\CF\" />
     <Folder Include="Image\MEM\" />
+    <Folder Include="Models\AWS\" />
     <Folder Include="Models\Backstage\CF\MeetingNews\" />
     <Folder Include="Models\Backstage\EX\ExhibitionNews\" />
     <Folder Include="Models\Backstage\LN\LatestNews\" />
-    <Folder Include="Models\DefinedModel\Backstage\" />
+    <Folder Include="Models\CF\" />
+    <Folder Include="Models\DefinedModel\AA\" />
+    <Folder Include="Models\DefinedModel\AWS\" />
+    <Folder Include="Models\DefinedModel\Backstage\AWS\" />
+    <Folder Include="Models\DefinedModel\Backstage\CF\" />
+    <Folder Include="Models\DefinedModel\Backstage\EX\" />
+    <Folder Include="Models\DefinedModel\Backstage\LN\" />
+    <Folder Include="Models\DefinedModel\Backstage\MEM\" />
+    <Folder Include="Models\DefinedModel\CF\" />
+    <Folder Include="Models\DefinedModel\EX\" />
+    <Folder Include="Models\DefinedModel\LN\" />
+    <Folder Include="Models\DefinedModel\MEM\" />
+    <Folder Include="Models\EX\" />
+    <Folder Include="Models\LN\" />
+    <Folder Include="Models\MEM\" />
+    <Folder Include="Scripts\AWS\" />
+    <Folder Include="Scripts\CF\" />
+    <Folder Include="Scripts\EX\" />
+    <Folder Include="Scripts\LN\" />
+    <Folder Include="Scripts\MEM\" />
+    <Folder Include="Views\GetAssociationEventdata\" />
+    <Folder Include="Views\GetAssociationHistorydata\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
