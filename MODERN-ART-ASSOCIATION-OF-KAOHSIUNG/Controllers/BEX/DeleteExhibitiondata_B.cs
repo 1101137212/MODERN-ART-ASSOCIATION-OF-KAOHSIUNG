@@ -11,9 +11,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BEX
     {
         #region Public Methods
 
-        public void DeleteExhibitiondata_B(Exhibition objPara)
+        public object DeleteExhibitiondata_B(Exhibition objPara)
         {
             BEXModel.DeleteExhibition_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods

@@ -11,9 +11,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BAA
     {
         #region Public Methods
 
-        public void DeleteAssociationEventdata_B(AssociationEvent objPara)
+        public object DeleteAssociationEventdata_B(AssociationEvent objPara)
         {
             BAEModel.DeleteAssociationEvent_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods

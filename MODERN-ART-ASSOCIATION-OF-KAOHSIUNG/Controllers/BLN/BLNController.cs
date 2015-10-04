@@ -27,13 +27,13 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
 
         #region Public Methods
 
-        // 建立學會沿革(BAH)View
+        // 建立媒體報導(BMDR)View
         public ActionResult MediaReportsIndex()
         {
             return View();
         }
 
-        // 建立學會沿革(BAH)View
+        // 建立得獎事蹟(BAW)View
         public ActionResult AwardIndex()
         {
             return View();

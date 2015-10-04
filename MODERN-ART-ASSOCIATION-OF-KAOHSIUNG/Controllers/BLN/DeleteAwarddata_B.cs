@@ -5,15 +5,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BEX
+namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BLN
 {
-    public partial class BEXController : Controller
+    public partial class BLNController : Controller
     {
         #region Public Methods
 
-        public object UpdateExhibitionRecorddata_B(ExhibitionRecord objPara)
+        public void DeleteAwarddata_B(Award objPara)
         {
-            BEXRModel.UpdateExhibitionRecord_B(objPara);
+            BAWModel.DeleteAward_B(objPara);
             object objData = true;
             return objData;
         }

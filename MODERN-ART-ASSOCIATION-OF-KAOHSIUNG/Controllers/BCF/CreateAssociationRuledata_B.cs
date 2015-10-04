@@ -11,9 +11,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
     {
         #region Public Methods
 
-        public void CreateAssociationRuledata_B(AssociationRule objPara)
+        public object CreateAssociationRuledata_B(AssociationRule objPara)
         {
             BARModel.CreateAssociationRule_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods

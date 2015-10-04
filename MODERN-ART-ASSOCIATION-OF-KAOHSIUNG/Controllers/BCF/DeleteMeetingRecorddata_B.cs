@@ -11,9 +11,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BCF
     {
         #region Public Methods
 
-        public void DeleteMeetingRecorddata_B(MeetingRecord objPara)
+        public object DeleteMeetingRecorddata_B(MeetingRecord objPara)
         {
             BMTRModel.DeleteMeetingRecord_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods

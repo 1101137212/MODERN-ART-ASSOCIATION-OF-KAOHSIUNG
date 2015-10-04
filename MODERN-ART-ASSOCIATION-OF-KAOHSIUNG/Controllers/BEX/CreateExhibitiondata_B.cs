@@ -11,9 +11,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BEX
     {
         #region Public Methods
 
-        public void CreateExhibitiondata_B(Exhibition objPara)
+        public object CreateExhibitiondata_B(Exhibition objPara)
         {
             BEXModel.CreateExhibition_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods

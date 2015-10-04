@@ -11,9 +11,11 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG.Controllers.BAA
     {
         #region Public Methods
 
-        public void DeleteAssociationHistorydata_B(AssociationHistory objPara)
+        public object DeleteAssociationHistorydata_B(AssociationHistory objPara)
         {
             BAHModel.DeleteAssociationHistory_B(objPara);
+            object objData = true;
+            return objData;
         }
 
         #endregion Public Methods

@@ -10,25 +10,24 @@
             console.log("無法取得db");
         }
     });
-    //$.ajax({
-    //    url: '/BAA/CreateAssociationEventdata_B',
-    //    type: 'POST',
-    //    data: {
-    //        AssociationEvent_Title: 'test88888454511111',
-    //        AssociationEvent_Detail: 'test8888545811111',
-    //        AssociationEvent_Date: '2015/08/30',
-    //        AssociationEvent_Picture: 'test8854511111',
-    //        AssociationEvent_Modifier: 6,
-    //        AssociationEvent_Modificationdatetime:'2015/08/28'
-    //    },
-    //    dataType: 'json',
-    //    success: function (data) {
-    //        console.log("test");
-    //    },
-    //    error: function () {
-    //        console.log("無法取得db");
-    //    }
-    //});
+    $.ajax({
+        url: '/BAA/CreateAssociationEventdata_B',
+        type: 'POST',
+        data: {
+            AssociationEvent_Title: 'test8887',
+            AssociationEvent_Detail: 'test8887',
+            AssociationEvent_Date: '2015/08/30',
+            AssociationEvent_Picture: 'test8854511111',
+            AssociationEvent_Modifier: 6,
+            AssociationEvent_Modificationdatetime:'2015/08/28'
+        },
+        success: function (data) {
+            console.log("test");
+        },
+        error: function () {
+            console.log("無法取得db");
+        }
+    });
     //$.ajax({
     //    url: '/BAA/UpdateAssociationEventdata_B',
     //    type: 'POST',
