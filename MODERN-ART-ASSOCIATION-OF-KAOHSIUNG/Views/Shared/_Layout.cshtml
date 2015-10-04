@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-tw">
 <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +9,9 @@
     @Scripts.Render("~/bundles/modernizr")
 
     <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <link href="~/Content/Dictionary/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Dictionary/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/main.css" rel="stylesheet" />
-    <link href="~/Content/Dictionary/font-awesome.css" rel="stylesheet" />
 
-    <script src="~/Scripts/Dictionary/jquery.min.js"></script>
-    <script src="~/Scripts/Dictionary/bootstrap.min.js"></script>
-    <script src="~/Scripts/scripts.js"></script>
     <script src="~/Scripts/main.js"></script>
-    <script src="~/Scripts/Dictionary/jquery-1.10.2.min.js"></script>
-
     <script src="http://use.edgefonts.net/poiret-one.js"></script>
-
 </head>
 <body>
     <div>
@@ -39,41 +28,42 @@
                     </div>
                     <div class="collapse navbar-collapse " sid="myNavbar">
                         <ul class="nav navbar-nav navbar-right dot">
-                            <li class="nat"><a href="#">作品集</a></li>
+                            <li class="nat">@Html.ActionLink("作品集", "Artisticworks", "AWS")</li>
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="nat"><a href="#">展覽快訊</a></li>
+                            <li class="dropdown nat">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">展覽專區<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu ">
+                                    <li>@Html.ActionLink("展覽快訊", "ExhibitionNews", "EX")</li>
+                                    <li>@Html.ActionLink("展覽回顧", "ExhibitionOld", "EX")</li>
+                                </ul>
+                            </li>
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown nat">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">最新消息<strong class="caret"></strong></a>
                                 <ul class="dropdown-menu ">
-                                    <li><a href="#">最新活動消息</a></li>
-                                    <li><a href="#">得獎事蹟</a></li>
-                                    <li><a href="#">媒體報導</a></li>
+                                    <li>@Html.ActionLink("最新活動消息", "LatestActivityNews", "LN")</li>
+                                    <li>@Html.ActionLink("得獎事蹟", "Award", "LN")</li>
+                                    <li>@Html.ActionLink("媒體報導", "MediaReports", "LN")</li>
                                 </ul>
                             </li>
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown nat">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">成員簡介<strong class="caret"></strong></a>
-                                <ul class="dropdown-menu ">
-                                    <li><a href="#">學會畫家</a></li>
-                                </ul>
-                            </li>
+                            <li class="nat">@Html.ActionLink("會員簡介", "Member", "MEM")</li>
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown nat">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">關於學會<strong class="caret"></strong></a>
                                 <ul class="dropdown-menu ">
-                                    <li><a href="#">設立沿革</a></li>
-                                    <li><a href="#">學會大事跡</a></li>
-                                    <li><a href="#">學會組織</a></li>
-                                    <li><a href="#">入會申請</a></li>
+                                    <li>@Html.ActionLink("設立沿革", "AssociationHistory", "AA")</li>
+                                    <li>@Html.ActionLink("學會大事跡", "AssociationEvent", "AA")</li>
+                                    <li>@Html.ActionLink("學會組織", "AssociationOrganization", "AA")</li>
+                                    <li>@Html.ActionLink("入會申請", "AssociationApplication", "AA")</li>
                                 </ul>
                             </li>
                         </ul>
