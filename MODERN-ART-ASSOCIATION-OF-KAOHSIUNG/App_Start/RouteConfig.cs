@@ -13,19 +13,20 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //後台的Route
-            routes.MapRoute(
-                name: "Backstage",
-                url: "Backstage/{controller}/{action}/{id}",
-                defaults: new { controller = "BAA", action = "AssociationHistoryIndex", id = UrlParameter.Optional }
-            );
-
+          
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-           
+
+            //後台的Route
+            //routes.MapRoute(
+            //    name: "Backstage",
+            //    url: "Backstage/{controller}/{action}/{id}",
+            //    defaults: new { controller = "BAA", action = "AssociationHistoryIndex", id = UrlParameter.Optional }
+            //);
+
         }
     }
 }
