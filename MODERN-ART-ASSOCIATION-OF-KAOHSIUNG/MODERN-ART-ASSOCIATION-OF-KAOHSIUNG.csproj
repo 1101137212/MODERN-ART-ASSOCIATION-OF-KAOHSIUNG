@@ -243,8 +243,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AA\GetAssociationEventListDataModel.cs" />
-    <Compile Include="Models\AA\GetAssociationHistoryListDataModel.cs" />
+    <Compile Include="Models\AA\GetAssociationEventListData.cs" />
+    <Compile Include="Models\AA\GetAssociationHistoryListData.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AWS\GetArtisticworksListData.cs" />
     <Compile Include="Models\Backstage\AA\AssociationEvent\GetAssociationEvent_B.cs" />
@@ -305,6 +305,7 @@
     <Compile Include="Models\Backstage\MEM\ResearchField\CreateResearchField_B.cs" />
     <Compile Include="Models\Backstage\MEM\ResearchField\DeleteResearchField_B.cs" />
     <Compile Include="Models\Backstage\MEM\ResearchField\UpdateResearchField_B.cs" />
+    <Compile Include="Models\DefinedModel\AWS\GetArtisticworksByID.cs" />
     <Compile Include="Models\DefinedModel\Backstage\AA\GetAssociationEvent_B.cs" />
     <Compile Include="Models\TableModel\Artisticworks.cs" />
     <Compile Include="Models\Backstage\AWS\GetArtisticworks_B.cs" />
