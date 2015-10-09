@@ -2,7 +2,7 @@ body {
     font-family: 微軟正黑體, 新細明體;
     /*font-family: 'Indie Flower', cursive;*/
     /*background-image: url('../img/bg.jpg');*/
-    background-image: url('../Image/Shared/bg.png');
+    background-image: url('../../Image/Shared/bg.png');
     background-repeat: no-repeat;
     -moz-background-size: cover;
     -webkit-background-size: cover;
