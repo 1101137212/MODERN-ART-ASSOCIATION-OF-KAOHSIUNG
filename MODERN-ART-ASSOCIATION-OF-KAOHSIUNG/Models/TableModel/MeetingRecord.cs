@@ -52,6 +52,11 @@
         /// </summary>
         public string MeetingRecord_Title { get; set; }
 
+        /// <summary>
+        /// 職位紀錄編號
+        /// </summary>
+        public string PositionRecord_ID { get; set; }
+
         public void PK_MeetingRecord(string MeetingRecord_ID)
         {
 
