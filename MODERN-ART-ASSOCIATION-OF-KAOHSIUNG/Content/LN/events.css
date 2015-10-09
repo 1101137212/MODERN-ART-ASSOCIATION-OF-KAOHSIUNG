@@ -1,0 +1,18 @@
+.event{
+	border-bottom: 3px dashed black ;
+	/*	border-top: 3px dashed black;*/
+	padding-top: 10px;padding-bottom: 10px;
+}
+.event a{
+	color: black;
+}
+.event:hover{
+	background-color: rgba(102, 178, 255,0.5);
+}
+.eventtitle{
+	color: rgb(158,52,38);
+	text-decoration:underline;
+}
+.eventexplain{
+	
+}
