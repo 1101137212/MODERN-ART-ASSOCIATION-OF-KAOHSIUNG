@@ -1,0 +1,12 @@
+﻿.memboxtitle:before{
+	content: "";
+	display: block;
+	padding-top: 60%; 	/* initial ratio of 1:1*/
+}
+
+.memboxtitle{
+	color: white;
+	text-align: right;
+    padding-right: 10px;
+
+}

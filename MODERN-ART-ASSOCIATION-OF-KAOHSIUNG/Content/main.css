@@ -411,7 +411,7 @@ a:-webkit-any-link{
     float: right;
 }
 
-.portfolio-item .portfolio-thumb , .portfolio-item .portfolio-thumb .portfolio-link:hover {
+/*.portfolio-item .portfolio-thumb , .portfolio-item .portfolio-thumb .portfolio-link:hover {
     color: #eda89b;
 }
 
@@ -423,7 +423,7 @@ a:-webkit-any-link{
 
 .portfolio-item .portfolio-thumb , .portfolio-item .portfolio-thumb .active {
     color: #eda89b;
-}
+}*/
 
 .portfolio-item .portfolio-thumb .portfolio-link {
     right: 0;
