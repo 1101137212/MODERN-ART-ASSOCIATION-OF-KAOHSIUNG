@@ -373,6 +373,11 @@
     <Content Include="Scripts\Backstage\MEM\PositionRecord.js" />
     <Content Include="Scripts\Backstage\MEM\ResearchField.js" />
     <Content Include="Scripts\Backstage\MEM\ResearchFieldRecord.js" />
+    <Content Include="Scripts\CF\AssociationRule.js" />
+    <Content Include="Scripts\CF\ChangePassword.js" />
+    <Content Include="Scripts\CF\MeetingNews.js" />
+    <Content Include="Scripts\CF\MeetingRecord.js" />
+    <Content Include="Scripts\CF\Secretary.js" />
     <Content Include="Scripts\Dictionary\bootstrap.js" />
     <Content Include="Scripts\Dictionary\bootstrap.min.js" />
     <Content Include="Content\Dictionary\bootstrap-theme.css.map" />
@@ -394,6 +399,13 @@
     <Content Include="Scripts\Dictionary\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\Dictionary\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Backstage\MEM\Member.js" />
+    <Content Include="Scripts\EX\ExhibitionNews.js" />
+    <Content Include="Scripts\EX\Exhibitionold.js" />
+    <Content Include="Scripts\LN\Award.js" />
+    <Content Include="Scripts\LN\LatestActivityNews.js" />
+    <Content Include="Scripts\LN\MediaReports.js" />
+    <Content Include="Scripts\MEM\Member.js" />
+    <Content Include="Scripts\MEM\MemberDetail.js" />
     <Content Include="Scripts\Shared\main.js" />
     <Content Include="Scripts\Dictionary\modernizr-2.6.2.js" />
     <Content Include="Scripts\Dictionary\modernizr.custom.min.js" />
@@ -548,10 +560,6 @@
     <Folder Include="Models\EX\" />
     <Folder Include="Models\LN\" />
     <Folder Include="Models\MEM\" />
-    <Folder Include="Scripts\CF\" />
-    <Folder Include="Scripts\EX\" />
-    <Folder Include="Scripts\LN\" />
-    <Folder Include="Scripts\MEM\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />

@@ -1,4 +1,13 @@
-﻿$(document).ready(function () {
+﻿$(function () {
+    ///<summary>
+    ///學會沿革(AH)
+    ///</summary>
+    ///<history>
+    ///2015/10/09   George Liu   Create
+    ///</history>
+
+    //#region 設定Control
+
     $.ajax({
         url: '/BAA/GetAssociationHistorydata_B',
         type: 'POST',
@@ -57,4 +66,20 @@
     //        console.log("無法取得db");
     //    }
     //});
-})
+
+    //#endregion
+
+    //#region 設定UI   
+
+    //#endregion
+
+    //#region 設定Event
+
+    //#endregion
+
+    //#region Private Method
+
+
+    //#endregion
+});
+

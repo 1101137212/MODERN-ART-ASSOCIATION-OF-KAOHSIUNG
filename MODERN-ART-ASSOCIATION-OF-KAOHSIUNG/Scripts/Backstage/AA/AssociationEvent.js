@@ -1,4 +1,13 @@
-﻿$(document).ready(function () {
+﻿$(function () {
+    ///<summary>
+    ///學會大事跡(AE)
+    ///</summary>
+    ///<history>
+    ///2015/10/09   George Liu   Create
+    ///</history>
+
+    //#region 設定Control
+
     $.ajax({
         url: '/BAA/GetAssociationEventdata_B',
         type: 'POST',
@@ -19,7 +28,7 @@
             AssociationEvent_Date: '2015/08/30',
             AssociationEvent_Picture: 'test8854511111',
             AssociationEvent_Modifier: 6,
-            AssociationEvent_Modificationdatetime:'2015/08/28'
+            AssociationEvent_Modificationdatetime: '2015/08/28'
         },
         success: function (data) {
             console.log("test");
@@ -62,4 +71,20 @@
     //        console.log("無法取得db");
     //    }
     //});
-})
+
+    //#endregion
+
+    //#region 設定UI   
+
+    //#endregion
+
+    //#region 設定Event
+
+    //#endregion
+
+    //#region Private Method
+
+
+    //#endregion
+});
+

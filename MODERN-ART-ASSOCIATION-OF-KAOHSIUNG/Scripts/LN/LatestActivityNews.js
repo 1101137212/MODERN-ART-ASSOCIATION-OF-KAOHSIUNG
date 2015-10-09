@@ -1,15 +1,16 @@
-﻿$(function () {
-    /// <summary>
-    /// 學會沿革(AH)
-    /// </summary>
-    /// <history>
-    /// 2015/10/09   George Liu   Create
-    /// </history>
+﻿
+$(function () {
+    ///<summary>
+    ///最新活動消息(LAN)
+    ///</summary>
+    ///<history>
+    ///2015/10/09   George Liu   Create
+    ///</history>
 
     //#region 設定Control
 
     $.ajax({
-        url: '/AA/GetAssociationHistoryListData',
+        url: '/LN/ControllerFunction',
         type: 'POST',
         dataType: 'json',
         success: function (data) {
@@ -35,3 +36,4 @@
 
     //#endregion
 });
+

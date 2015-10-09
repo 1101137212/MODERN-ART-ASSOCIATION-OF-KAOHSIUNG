@@ -1,5 +1,5 @@
 ﻿
-$(document).ready(function () {
+$(function () {
     /// <summary>
     /// 學會大事跡(AE)
     /// </summary>
