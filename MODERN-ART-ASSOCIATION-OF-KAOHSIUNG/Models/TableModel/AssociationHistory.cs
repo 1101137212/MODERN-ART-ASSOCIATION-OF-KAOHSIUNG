@@ -18,6 +18,11 @@
         public string AssociationHistory_ID { get; set; }
 
         /// <summary>
+        /// 學會沿革標題
+        /// </summary>
+        public string AssociationHistory_Title { get; set; }
+
+        /// <summary>
         /// 修改時間
         /// </summary>
         public string AssociationHistory_Modificationdatetime { get; set; }

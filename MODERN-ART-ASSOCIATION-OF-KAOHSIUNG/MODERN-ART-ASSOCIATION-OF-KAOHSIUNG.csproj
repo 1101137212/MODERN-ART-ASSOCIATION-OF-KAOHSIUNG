@@ -344,6 +344,7 @@
     <Content Include="Content\EX\exhibition.css" />
     <Content Include="Content\Dictionary\font-awesome.css" />
     <Content Include="Content\Dictionary\font-awesome.min.css" />
+    <Content Include="Content\LN\events.css" />
     <Content Include="Content\Shared\main.css" />
     <Content Include="Content\Shared\nav.css" />
     <Content Include="Content\LN\news.css" />
@@ -354,6 +355,8 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Dictionary\Site.css" />
+    <Content Include="Image\LN\event1.png" />
+    <Content Include="Image\LN\event2.png" />
     <Content Include="Scripts\AA\AssociationEvent.js" />
     <Content Include="Scripts\AA\AssociationHistory.js" />
     <Content Include="Scripts\AWS\Artisticworks.js" />
@@ -542,6 +545,16 @@
     <Folder Include="Models\Backstage\EX\ExhibitionNews\" />
     <Folder Include="Models\Backstage\LN\LatestNews\" />
     <Folder Include="Models\CF\" />
+    <Folder Include="Models\DefinedModel\AA\" />
+    <Folder Include="Models\DefinedModel\Backstage\AWS\" />
+    <Folder Include="Models\DefinedModel\Backstage\CF\" />
+    <Folder Include="Models\DefinedModel\Backstage\EX\" />
+    <Folder Include="Models\DefinedModel\Backstage\LN\" />
+    <Folder Include="Models\DefinedModel\Backstage\MEM\" />
+    <Folder Include="Models\DefinedModel\CF\" />
+    <Folder Include="Models\DefinedModel\EX\" />
+    <Folder Include="Models\DefinedModel\LN\" />
+    <Folder Include="Models\DefinedModel\MEM\" />
     <Folder Include="Models\EX\" />
     <Folder Include="Models\LN\" />
     <Folder Include="Models\MEM\" />

@@ -8,9 +8,9 @@
         public string TABLE_NAME { get { return "PositionRecord"; } }
         
         /// <summary>
-        /// 會議記錄編號
+        /// 職位記錄編號
         /// </summary>
-        public string MeetingRecord_ID { get; set; }
+        public string PositionRecord_ID { get; set; }
 
         /// <summary>
         /// 會員編號
@@ -26,11 +26,6 @@
         /// 職位結束時間
         /// </summary>
         public string PositionRecord_Enddate { get; set; }
-
-        /// <summary>
-        /// 職位紀錄編號
-        /// </summary>
-        public string PositionRecord_ID { get; set; }
 
         /// <summary>
         /// 職位開始時間
