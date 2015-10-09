@@ -344,8 +344,8 @@
     <Content Include="Content\EX\exhibition.css" />
     <Content Include="Content\Dictionary\font-awesome.css" />
     <Content Include="Content\Dictionary\font-awesome.min.css" />
-    <Content Include="Content\main.css" />
-    <Content Include="Content\nav.css" />
+    <Content Include="Content\Shared\main.css" />
+    <Content Include="Content\Shared\nav.css" />
     <Content Include="Content\LN\news.css" />
     <Content Include="Content\LN\prize.css" />
     <Content Include="Content\AWS\workcollection.css" />
@@ -392,7 +392,7 @@
     <Content Include="Scripts\Dictionary\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\Dictionary\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Backstage\MEM\Member.js" />
-    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\Shared\main.js" />
     <Content Include="Scripts\Dictionary\modernizr-2.6.2.js" />
     <Content Include="Scripts\Dictionary\modernizr.custom.min.js" />
     <Content Include="Scripts\Dictionary\npm.js" />
@@ -510,7 +510,7 @@
     <Content Include="Views\BLN\AwardIndex.cshtml" />
     <Content Include="Views\BCF\AssociationRuleIndex.cshtml" />
     <Content Include="Views\BEX\ExhibitionIndex.cshtml" />
-    <Content Include="Scripts\main.js.bak" />
+    <Content Include="Scripts\Shared\main.js.bak" />
     <Content Include="Views\BCF\MeetingRecordIndex.cshtml" />
     <Content Include="Views\AA\AssociationEvent.cshtml" />
     <Content Include="Views\AA\AssociationHistory.cshtml" />
@@ -520,7 +520,6 @@
     <Content Include="Views\LN\Award.cshtml" />
     <Content Include="Views\LN\MediaReports.cshtml" />
     <Content Include="Views\LN\LatestActivityNews.cshtml" />
-    <Content Include="Views\EX\Exhibition.cshtml" />
     <Content Include="Views\EX\ExhibitionNews.cshtml" />
     <Content Include="Views\AWS\Artisticworks.cshtml" />
     <Content Include="Views\CF\AssociationRule.cshtml" />
@@ -529,6 +528,7 @@
     <Content Include="Views\CF\Secretary.cshtml" />
     <Content Include="Views\CF\ChangePassword.cshtml" />
     <Content Include="Views\MEM\MemberDetail.cshtml" />
+    <Content Include="Views\EX\Exhibitionold.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Backstage\" />
