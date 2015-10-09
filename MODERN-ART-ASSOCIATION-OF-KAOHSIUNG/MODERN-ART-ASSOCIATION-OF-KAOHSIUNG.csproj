@@ -344,7 +344,9 @@
     <Content Include="Content\EX\exhibition.css" />
     <Content Include="Content\Dictionary\font-awesome.css" />
     <Content Include="Content\Dictionary\font-awesome.min.css" />
+    <Content Include="Content\LN\events.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\MEM\member.css" />
     <Content Include="Content\nav.css" />
     <Content Include="Content\LN\news.css" />
     <Content Include="Content\LN\prize.css" />
@@ -529,11 +531,11 @@
     <Content Include="Views\CF\Secretary.cshtml" />
     <Content Include="Views\CF\ChangePassword.cshtml" />
     <Content Include="Views\MEM\MemberDetail.cshtml" />
+    <Content Include="Views\EX\Exhibitionold.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Backstage\" />
     <Folder Include="Content\CF\" />
-    <Folder Include="Content\MEM\" />
     <Folder Include="Image\AWS\" />
     <Folder Include="Image\Backstage\" />
     <Folder Include="Image\CF\" />
