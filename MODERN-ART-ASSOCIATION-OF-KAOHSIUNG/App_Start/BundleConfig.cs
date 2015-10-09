@@ -21,7 +21,8 @@ namespace MODERN_ART_ASSOCIATION_OF_KAOHSIUNG
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/Dictionary/bootstrap.js",
-                      "~/Scripts/Dictionary/respond.js"));
+                      "~/Scripts/Dictionary/respond.js",
+                      "~/Scripts/Shared/main.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/Dictionary/bootstrap.css",
