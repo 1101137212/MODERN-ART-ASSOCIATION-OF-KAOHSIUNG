@@ -466,7 +466,9 @@
     <Content Include="Views\備分\prize.html" />
     <Content Include="Views\備分\rule.html" />
     <Content Include="Views\備分\WorkCollection.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
