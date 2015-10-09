@@ -229,7 +229,7 @@ footer {
 }
 .nulogo {
     min-height: 100px;
-    background-image: url('../Image/Shared/slogo.png');
+    background-image: url('../../Image/Shared/slogo.png');
     background-repeat: no-repeat;
 }
 
